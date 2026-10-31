@@ -1,18 +1,17 @@
-import Link from 'next/link'
-import React from 'react'
-
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/Button'
+import { Container } from '@/components/ui/Container'
+import { Heading } from '@/components/ui/Heading'
 
 export default function NotFound() {
   return (
-    <div className="container py-28">
-      <div className="prose max-w-none">
-        <h1 style={{ marginBottom: 0 }}>404</h1>
-        <p className="mb-4">This page could not be found.</p>
-      </div>
-      <Button asChild variant="default">
-        <Link href="/">Go home</Link>
+    <Container className="flex flex-col items-center py-28 text-center">
+      <Heading as="h1" size="page" className="mb-5">
+        404
+      </Heading>
+      <p className="mb-8">This page could not be found.</p>
+      <Button href="/shop" variant="primary" size="lg">
+        Return to shop
       </Button>
-    </div>
+    </Container>
   )
 }
