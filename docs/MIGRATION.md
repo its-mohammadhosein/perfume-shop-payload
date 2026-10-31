@@ -18,7 +18,7 @@ Reference docs in the html base:
 | **No new Payload collections** | Don't add Products, Collections, etc. to `payload.config.ts`. Leave the existing collections (`Pages`, `Posts`, `Media`, `Categories`, `Users`) and globals (`Header`, `Footer`) untouched. |
 | **Replace the template frontend** | Keep the Payload admin, the `(payload)` routes, and the backend config. Replace the `(frontend)` routes, header, footer, blocks, heros, and theme. |
 | **Logic is not important** | Cart, checkout, wishlist, filters, search, sorting, newsletter, and comments can be static UI or simple local state. No API calls. |
-| **Animations in plain JS** | Write each animation as an isolated vanilla-JS module (§7) so it can be swapped for **GSAP** later without touching components. |
+| **Animations in plain JS** | Write each animation as an isolated vanilla-JS module (§7) so it stays isolated from components. (GSAP was planned for later; decided against on 2026-10-31, see §7.) |
 | **No WoodMart code** | WoodMart CSS, JS, and the icon font are proprietary. Use them as a visual reference only. Icons come from `lucide-react`, which is already installed. |
 
 ---
@@ -132,7 +132,9 @@ Extraction can be done by hand or with a one-off script that reads the html base
 
 ---
 
-## 7. Animations (plain JS now, GSAP later)
+## 7. Animations (plain JS)
+
+**Decision (2026-10-31): no GSAP.** The modules stay plain JS. They are small, already respect reduced motion, and GSAP would add 25–70 KB per page for little visible gain (the carousel would even get worse: native scroll-snap beats GSAP dragging on phones).
 
 Each animation is a module in `src/animations/` with the same shape:
 
@@ -144,10 +146,10 @@ export function initMarquee(el: HTMLElement, opts?: MarqueeOptions): () => void 
 ```
 
 A single hook connects them to React: `useAnimation(ref, initMarquee, opts)`. It runs `init` on mount and cleanup on unmount.
-Components never contain animation code. Converting to GSAP later means rewriting the module body while the signature stays the same.
+Components never contain animation code. Changing an animation means rewriting the module body while the signature stays the same.
 Every module respects `prefers-reduced-motion`.
 
-| Animation | Where | Plain-JS approach now | Notes for GSAP later |
+| Animation | Where | Plain-JS approach now | GSAP notes (kept in case it is ever revisited) |
 | --------- | ----- | --------------------- | -------------------- |
 | Hero slider (fade, autoplay, dots) | Home | Opacity crossfade with timer + dot buttons | Timeline per slide |
 | Carousels (arrows, drag) | New In, Promo, Journal, From Collection, Instagram | CSS scroll-snap track; arrows call `scrollBy`; pointer-drag | Draggable / Observer |
@@ -189,7 +191,6 @@ Each phase ends with a side-by-side visual check against the html base at the th
 
 ## 9. Later phases (out of scope now)
 
-- Convert `src/animations/*` to **GSAP**
 - Move `src/data/*` into **Payload collections and blocks**, with a seed script, once collections are allowed
 - Real commerce logic: cart state, checkout, payments, wishlist persistence, filters and search
 - Replace the demo copy and imagery with real brand content

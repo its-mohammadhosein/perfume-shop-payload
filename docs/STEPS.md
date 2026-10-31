@@ -16,7 +16,7 @@ The working checklist for the migration described in [`MIGRATION.md`](MIGRATION.
 | Template frontend | Replaced. The Payload admin and backend config stay. |
 | Post URLs | `/journal/[slug]` |
 | Promo popup | Dropped |
-| Animations | Plain-JS modules in `src/animations/`, run through `useAnimation`. They become GSAP later. |
+| Animations | Plain-JS modules in `src/animations/`, run through `useAnimation`. No GSAP (decided 2026-10-31). |
 | Logic | Not a priority. Cart, wishlist, filters, search, and forms are static UI or local state. |
 
 ## Environment notes
@@ -341,7 +341,7 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 
 ---
 
-## Phase 10 — Polish ✅ (GSAP conversion not started, by decision)
+## Phase 10 — Polish ✅
 
 > **As built:** `utilities/pageMetadata.ts` gives every route its title, description, canonical URL, Open Graph and Twitter card (Next replaces `openGraph` rather than merging it, so each page sets all of it); cart / checkout / account / wishlist / compare / 404 are `noindex`; the template's OG image and `mergeOpenGraph` are gone. `next-sitemap` (whose config excluded every page and pointed at deleted sitemaps) is replaced by `app/sitemap.ts` (109 URLs) and `app/robots.ts`. Accessibility: hidden `<h1>` on Home (the source has none), mega menu no longer opens on focus (a toggle button shown on focus opens it, Escape closes; the dimming overlay now closes it on hover too), WAI-ARIA arrow keys on tabs, `hooks/useFocusTrap` in off-canvas panels and the lightbox, lightbox returns focus to its opener. Responsive QA against the html base at 375 / 768 / 1024 / 1920: the source keeps 4-column product grids, the two-column product page and the desktop footer from 769px, so those now switch at `md`; collection banners and Instagram tiles swipe on mobile like the source. Removed: `/dev` pages, `components.json`, `tailwind.config.mjs` (typography only), and `geist`, Radix, `tw-animate-css`, `react-hook-form`, `prism-react-renderer`, `@payloadcms/admin-bar`, `@payloadcms/live-preview-react`, `next-sitemap`, `autoprefixer`, `@tailwindcss/typography`. `tests/e2e/frontend.e2e.spec.ts` visits every route (from the data) and checks status, one `<h1>`, header, footer and no console errors, plus the styled 404 (`E2E_BASE_URL` points it at a running server).
 
@@ -373,4 +373,4 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 7.1–7.3 | `/journal` (6 cards, 3 columns) and `/journal/[slug]` (6 static params, 404 for unknown slugs). `PostContent`, `AuthorBio`, `PostTags`, `ShareButtons`, `PostNav`, `CommentForm` (static). Extractor and data updated for two-column rows. Screenshot check at 1440px and 390px against the html base: page heights within 26px, no console errors, no horizontal overflow; related-posts arrows checked by hover and click. |
 | 2026-10-31 | 8.1–8.5 | `/about-us`: intro, marquee, Our Story + FAQ accordion, Why Choose WoodMart cards (1 / 2 / 4 per row), Instagram strip. Screenshot check at 1440px, 900px and 390px against the html base: page height within 46px, no console errors, no horizontal overflow; FAQ open / close checked by clicking. |
 | 2026-10-31 | 9.1–9.6 | `/cart`, `/wishlist`, `/compare` (empty states), `/checkout` (billing form + DUMMY order), `/my-account` (login / register), `/fragrances`, `/contact-us`, `/faq`, `/refund`, `/cookies`, `/terms`, `/privacy`, styled 404 with a catch-all route. Every internal link in the header, menus and footer returns 200; unknown URLs return a styled 404. Cart and wishlist compared with the html base at 1440px; all new pages checked at 390px with no horizontal overflow and no console errors. |
-| 2026-10-31 | 10.1–10.6 | Metadata on every route, sitemap / robots, accessibility fixes (mega menu keyboard, tabs, focus traps), tablet layout fixes from the responsive QA, dependency cleanup, route smoke test (115 tests), animation README. `tsc`, `lint` (0 errors) and `pnpm build` pass. Remaining page-height differences against the html base are under 8% at every checked width. GSAP conversion intentionally left for later. |
+| 2026-10-31 | 10.1–10.6 | Metadata on every route, sitemap / robots, accessibility fixes (mega menu keyboard, tabs, focus traps), tablet layout fixes from the responsive QA, dependency cleanup, route smoke test (115 tests), animation README. `tsc`, `lint` (0 errors) and `pnpm build` pass. Remaining page-height differences against the html base are under 8% at every checked width. GSAP conversion dropped afterwards: the modules stay plain JS. |
