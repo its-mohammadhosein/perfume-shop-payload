@@ -1,6 +1,6 @@
 import scraped from './generated/products.json'
 import detail from './generated/product-detail.json'
-import { hasImage, image } from './images'
+import { file, hasImage, image } from './images'
 import { collections, olfactiveFamilies } from './taxonomies'
 import type { CategorySlug, FragranceNotes, Product, ProductSize } from './types'
 
@@ -132,11 +132,15 @@ export const products: Product[] = scraped.map((p) => {
     images: imageKeys.map((key) => image(key, p.name)),
     ...copy,
     notes: isDetailed ? (detail.notes as FragranceNotes) : dummyNotes(assignment.olfactive),
-    ...(isDetailed ? {} : { dummy: true }),
+    ...(isDetailed ? { video: file(detail.video) } : { dummy: true }),
   }
 })
 
-export const productVideo = detail.video
+/** Collection video (YouTube) shown on product pages; the html base uses one video for all */
+export const collectionVideoUrl = detail.collectionBlurb.videoUrl.replace(
+  'youtube.com/embed/',
+  'youtube-nocookie.com/embed/',
+)
 
 export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug)

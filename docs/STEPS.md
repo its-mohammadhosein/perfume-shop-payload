@@ -23,7 +23,7 @@ The working checklist for the migration described in [`MIGRATION.md`](MIGRATION.
 
 - Node **v24.21.0** and pnpm **12.9.1** are installed, but `package.json` `engines` asks for Node `^22.23.4 || >=24.22.1` and pnpm `^9–^11`. This only causes warnings (no `engine-strict`); `tsc` passes. Upgrade Node to ≥24.22.1 when convenient.
 - The static frontend needs no database. The admin (`/admin`) still uses `DATABASE_URL` from `.env`.
-- The payload app has **no git remote** yet, so commits can't be pushed.
+- Remote: `git@github.com:its-mohammadhosein/perfume-shop-payload.git` (`main`).
 - **Dev server CSS quirk:** with Turbopack on this machine, editing only a `.tsx` file sometimes doesn't regenerate Tailwind CSS, so new classes have no effect. Restart `pnpm dev` (editing `globals.css` content also works). Production builds are not affected.
 
 ## Checks after each step
@@ -276,7 +276,9 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 
 ---
 
-## Phase 6 — Product page (`/product/[slug]`)
+## Phase 6 — Product page (`/product/[slug]`) ✅
+
+> **As built:** the gallery follows the source's `thumbs-grid-bottom_combined_3`: a 5-column grid with a 50px gap. The first item spans the full width and plays the product video (real only for the three Abyss Bleu products); the rest alternate 3+2 / 2+3, centred vertically. Below 1025px it becomes a swipeable strip. The lightbox is React state with a CSS fade (no animation module). Size swatches follow the source's text style 2 (45px, 1px inset border, 2px when active). The collection block loads the source's YouTube video only after a click (youtube-nocookie). "From Collection" shows up to 8 other products from the same collection, 100ml first.
 
 | Step | Part | Key specs |
 | ---- | ---- | --------- |
@@ -359,3 +361,4 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 3.1–3.5 | `ProductCard` (+ `CardGallery` and `animations/cardGallery.ts`), `ProductGrid`, `ui/Carousel` (+ `animations/carousel.ts`), `ui/Pagination`, `blog/PostCard`, `scrollbar-none` utility. Verified with screenshots: carousel next scrolls one slide (470px at 1440px), hover cycles images, no console errors; desktop and mobile match the html base. |
 | 2026-10-31 | 4.1–4.10 | Home page: hero slider (`animations/heroSlider.ts`, 5s autoplay as in the source), New In, olfactory family buttons, marquee (spacing matched to the source), featured fragrances, promotional tabs, collection banners, journal carousel, Instagram strip. Built from the source block CSS; one screenshot check at 1440px and 390px with no console errors. |
 | 2026-10-31 | 5.1–5.2 | `/shop`, `/shop/page/[2-6]`, `/collection/[slug]` (6), `/olfactive-family/[slug]` (9). `ArchivePage`, `FilterSidebar` (Category, Price (static), Collection, Olfactive family, Stock status), `ShopFilters` off-canvas. Route statuses checked (page 7 and unknown slugs return 404). One screenshot check, no console errors. |
+| 2026-10-31 | 6.1–6.7 | `/product/[slug]` for all 72 products (static params, metadata, 404 for unknown slugs). `ProductGallery` (+ lightbox), `SizeSwitcher`, `AddToCart` (UI only), `ProductAttributes`, `CollectionVideo`, `ProductNotes`. Data: `Product.video`, `collectionVideoUrl`. Screenshot check at 1440px and 390px: lightbox opens and closes with Esc, no console errors. |

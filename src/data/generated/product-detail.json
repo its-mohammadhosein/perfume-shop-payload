@@ -49,22 +49,8 @@
     "description": "Aurora Haze is a luminous, ethereal fragrance that captures the serene beauty of dawn. Opening with delicate citrus and dewy florals, it unfolds into a heart of soft amber and blooming jasmine, evoking the first golden rays of sunlight. A warm base of creamy sandalwood and subtle musk lingers on the skin, wrapping you in a gentle, radiant embrace. Elegant and uplifting, Aurora Haze is a scent that whispers of new beginnings and endless possibilities."
   },
   "notes": {
-    "top": [
-      "Bergamot",
-      "Pimento Berry",
-      "Oregano"
-    ],
-    "heart": [
-      "Amber",
-      "Citrus",
-      "Frankincense",
-      "Vanilla"
-    ],
-    "base": [
-      "Oud",
-      "Leather",
-      "Patchouli",
-      "Sandalwood"
-    ]
+    "top": ["Bergamot", "Pimento Berry", "Oregano"],
+    "heart": ["Amber", "Citrus", "Frankincense", "Vanilla"],
+    "base": ["Oud", "Leather", "Patchouli", "Sandalwood"]
   }
 }

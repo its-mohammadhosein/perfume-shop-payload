@@ -67,6 +67,8 @@ export type Product = Dummy & {
   shortDescription: string
   description: string
   notes: FragranceNotes
+  /** Product video shown as the first gallery item (only mirrored for Abyss Bleu) */
+  video?: FileAsset
 }
 
 export type PostBlock =
