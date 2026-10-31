@@ -41,7 +41,10 @@ export default function UIPlayground() {
           <div className="flex flex-wrap gap-4">
             {colors.map((c) => (
               <div key={c} className="w-28 text-sm">
-                <div className="mb-2 h-16 border border-line" style={{ background: `var(--color-${c})` }} />
+                <div
+                  className="mb-2 h-16 border border-line"
+                  style={{ background: `var(--color-${c})` }}
+                />
                 {c}
               </div>
             ))}
@@ -59,8 +62,8 @@ export default function UIPlayground() {
           ))}
           <p className="text-lead">Lead text. Radiant blend of citrus, florals, and warm musks.</p>
           <p>
-            Body text. At WoodMart Fragrances, we believe that scent is more than just an aroma. It is an
-            experience.
+            Body text. At WoodMart Fragrances, we believe that scent is more than just an aroma. It
+            is an experience.
           </p>
         </Section>
 
@@ -69,7 +72,14 @@ export default function UIPlayground() {
             Buttons
           </Heading>
           {variants.map((v) => (
-            <div key={v} className={v === 'white' ? 'mb-4 flex flex-wrap items-center gap-4 bg-footer p-4' : 'mb-4 flex flex-wrap items-center gap-4'}>
+            <div
+              key={v}
+              className={
+                v === 'white'
+                  ? 'mb-4 flex flex-wrap items-center gap-4 bg-footer p-4'
+                  : 'mb-4 flex flex-wrap items-center gap-4'
+              }
+            >
               {sizes.map((s) => (
                 <Button key={s} variant={v} size={s}>
                   {v} {s}

@@ -101,7 +101,9 @@ Keep `metadata` (metadataBase, Open Graph) and set the default title to "Perfume
 
 ---
 
-## Phase 1 — Data and assets
+## Phase 1 — Data and assets ✅
+
+> **As built:** one script (`scripts/extract-html-base.mjs`) does both the extraction and the image copy. The scraped facts are committed as JSON in `src/data/generated/`, not git-ignored in `scripts/out/`. `collections.ts` and `olfactive.ts` are merged into `taxonomies.ts`. `tests/int/data.int.spec.ts` checks the data against the html base counts.
 
 ### 1.1 Types (`src/data/types.ts`)
 `Product`, `ProductSize`, `Fragrance`, `Collection`, `OlfactiveFamily`, `Gender`, `Category`, `Post`, `Author`, `NavItem`, `MegaMenuColumn`, `FooterColumn`, `HeroSlide`, `FeatureCard`, `CollectionBanner`, `InstagramTile`, `FaqItem`, `InfoPage`. Each type has an optional `dummy?: boolean`.
@@ -148,7 +150,9 @@ Image paths in `src/data` point to these locations. `next/image` handles resizin
 
 ---
 
-## Phase 2 — Global layout
+## Phase 2 — Global layout ✅
+
+> **As built:** the mega menu is a centred 1320px box with the Her and Him columns stacked, then All Collections, then the featured card, as in the html base. Nav hover fades to 70% instead of underlining. Hovering the menu dims the page. The search is a dropdown under "Search" with instant results, not an off-canvas panel. Dropdown, off-canvas and drill-down motion are CSS transitions; only the sticky header and scroll-to-top are animation modules.
 
 ### 2.1 Header shell (`components/layout/Header.tsx`)
 - Two variants: **overlap** (home: transparent, white logo and links, 2px white bottom border, sits over the hero) and **solid** (other pages: white background, black logo, 2px `primary` bottom border)
@@ -343,3 +347,5 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 0.3–0.5 | Satoshi in `src/fonts/` via `next/font/local`. `globals.css` rewritten with tokens, type-scale and spacing utilities; breakpoints set to exactly 769px / 1025px. New root layout with skip link and placeholder Header/Footer. |
 | 2026-10-31 | 0.6–0.7 | `Container`, `Section`, `Heading`, `Button`, `Price`, `Icon` in `components/ui/`. `useAnimation` hook, `animations/{types,reducedMotion,marquee}.ts`, and the `Marquee` component. Playground at `/dev/ui`. |
 | 2026-10-31 | 0.8 | `tsc` passes. `pnpm lint` was already crashing before these changes (`FlatCompat` + eslint-config-next 16); fixed by importing the native flat configs. It now passes with 4 warnings, all in untouched template files. `/`, `/dev/ui` and a 404 render in `pnpm dev`. `next dev` adds a Next.js agent-rules block to `CLAUDE.md` on every run. |
+| 2026-10-31 | 1.1–1.5 | `scripts/extract-html-base.mjs`: 72 products (24 fragrances, 36 men's / 36 women's), Opus Essence members, Abyss Bleu detail, 6 posts + full body of *Scent & Sensibility*, and 115 images (4.0 MB) copied to `public/images/` with dimensions read by `sharp`. 24 gallery images were never mirrored and are skipped. Data in `src/data/` (types, images registry, taxonomies, products, posts, navigation, home, about, pages). Collection and olfactive assignments are dummy but reproduce the shop filter counts exactly. 7 data tests pass. |
+| 2026-10-31 | 2.1–2.8 | Header (overlap on `/`, solid elsewhere; boxed 2px border; logo 240/150px), mega menu, search dropdown, side cart, mobile drill-down menu, sticky header (hide on scroll down, show on scroll up, verified at all four states), footer (50/50 statement row, inline newsletter, brand icons, payments), scroll-to-top. Compared with the html base via Playwright screenshots at 1440px and 390px. Fixed along the way: `next.config.ts` `images.localPatterns` now allows `/images/**`; `cn()` now knows the custom `text-*` sizes (tailwind-merge was dropping `text-hero` next to `text-white`). |

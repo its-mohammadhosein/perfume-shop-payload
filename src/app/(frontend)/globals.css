@@ -4,6 +4,9 @@
 
 @plugin "@tailwindcss/typography";
 
+/* Header over a dark hero (home, before it turns sticky). Toggled by animations/stickyHeader.ts */
+@custom-variant header-light (&:where([data-header-tone='light'], [data-header-tone='light'] *));
+
 /* Design tokens — see woodmart-perfume/DESIGN.md */
 @theme {
   /* Breakpoints match WoodMart: tablet from 769px, desktop from 1025px */

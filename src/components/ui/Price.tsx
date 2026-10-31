@@ -15,7 +15,12 @@ type PriceProps = {
 
 export function Price({ amount, regular, className }: PriceProps) {
   return (
-    <span className={cn('inline-flex items-baseline gap-2 text-base leading-none font-medium text-title', className)}>
+    <span
+      className={cn(
+        'inline-flex items-baseline gap-2 text-base leading-none font-medium text-title',
+        className,
+      )}
+    >
       {regular !== undefined && regular > amount && (
         <del className="text-sm font-normal text-body">{formatPrice(regular)}</del>
       )}

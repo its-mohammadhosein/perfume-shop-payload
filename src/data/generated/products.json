@@ -1,0 +1,1370 @@
+[
+  {
+    "id": 144,
+    "slug": "abyss-bleu",
+    "name": "Abyss Bleu 100ml",
+    "fragranceName": "Abyss Bleu",
+    "fragranceSlug": "abyss-bleu",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE110",
+    "images": [
+      "2025/11/abyss-bleu.jpeg",
+      "2025/11/abyss-bleu-1.jpeg",
+      "2025/11/abyss-bleu-2.jpeg",
+      "2025/11/abyss-bleu-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 773,
+    "slug": "abyss-bleu-2ml-sample",
+    "name": "Abyss Bleu 2ml Sample",
+    "fragranceName": "Abyss Bleu",
+    "fragranceSlug": "abyss-bleu",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE110-2",
+    "images": [
+      "2025/11/abyss-bleu-3.jpeg",
+      "2025/11/abyss-bleu-1.jpeg",
+      "2025/11/abyss-bleu-2.jpeg",
+      "2025/11/abyss-bleu.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 769,
+    "slug": "abyss-bleu-50ml",
+    "name": "Abyss Bleu 50ml",
+    "fragranceName": "Abyss Bleu",
+    "fragranceSlug": "abyss-bleu",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE110-1",
+    "images": [
+      "2025/11/abyss-bleu-2.jpeg",
+      "2025/11/abyss-bleu-1.jpeg",
+      "2025/11/abyss-bleu-3.jpeg",
+      "2025/11/abyss-bleu.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 73,
+    "slug": "amber-bloom",
+    "name": "Amber Bloom 100ml",
+    "fragranceName": "Amber Bloom",
+    "fragranceSlug": "amber-bloom",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE410",
+    "images": [
+      "2025/11/amber-bloom.jpeg",
+      "2025/11/amber-bloom-1.jpeg",
+      "2025/11/amber-bloom-2.jpeg",
+      "2025/11/amber-bloom-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 679,
+    "slug": "amber-bloom-2ml-sample",
+    "name": "Amber Bloom 2ml Sample",
+    "fragranceName": "Amber Bloom",
+    "fragranceSlug": "amber-bloom",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE410-2",
+    "images": [
+      "2025/11/amber-bloom-3.jpeg",
+      "2025/11/amber-bloom-1.jpeg",
+      "2025/11/amber-bloom-2.jpeg",
+      "2025/11/amber-bloom.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 675,
+    "slug": "amber-bloom-50ml",
+    "name": "Amber Bloom 50ml",
+    "fragranceName": "Amber Bloom",
+    "fragranceSlug": "amber-bloom",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE410-1",
+    "images": [
+      "2025/11/amber-bloom-2.jpeg",
+      "2025/11/amber-bloom-1.jpeg",
+      "2025/11/amber-bloom-3.jpeg",
+      "2025/11/amber-bloom.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 85,
+    "slug": "amethyst-haze",
+    "name": "Amethyst Haze 100ml",
+    "fragranceName": "Amethyst Haze",
+    "fragranceSlug": "amethyst-haze",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA410",
+    "images": [
+      "2025/11/amethyst-haze.jpeg",
+      "2025/11/amethyst-haze-1.jpeg",
+      "2025/11/amethyst-haze-2.jpeg",
+      "2025/11/amethyst-haze-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 616,
+    "slug": "amethyst-haze-2ml-sample",
+    "name": "Amethyst Haze 2ml Sample",
+    "fragranceName": "Amethyst Haze",
+    "fragranceSlug": "amethyst-haze",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA410-2",
+    "images": [
+      "2025/11/amethyst-haze-3.jpeg",
+      "2025/11/amethyst-haze-1.jpeg",
+      "2025/11/amethyst-haze-2.jpeg",
+      "2025/11/amethyst-haze.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 612,
+    "slug": "amethyst-haze-50ml",
+    "name": "Amethyst Haze 50ml",
+    "fragranceName": "Amethyst Haze",
+    "fragranceSlug": "amethyst-haze",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA410-1",
+    "images": [
+      "2025/11/amethyst-haze-2.jpeg",
+      "2025/11/amethyst-haze-1.jpeg",
+      "2025/11/amethyst-haze-3.jpeg",
+      "2025/11/amethyst-haze.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 195,
+    "slug": "arctic-dusk",
+    "name": "Arctic Dusk 100ml",
+    "fragranceName": "Arctic Dusk",
+    "fragranceSlug": "arctic-dusk",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB210",
+    "images": [
+      "2025/11/arctic-dusk.jpeg",
+      "2025/11/arctic-dusk-1.jpeg",
+      "2025/11/arctic-dusk-2.jpeg",
+      "2025/11/arctic-dusk-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 714,
+    "slug": "arctic-dusk-2ml-sample",
+    "name": "Arctic Dusk 2ml Sample",
+    "fragranceName": "Arctic Dusk",
+    "fragranceSlug": "arctic-dusk",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB210-2",
+    "images": [
+      "2025/11/arctic-dusk-3.jpeg",
+      "2025/11/arctic-dusk-1.jpeg",
+      "2025/11/arctic-dusk-2.jpeg",
+      "2025/11/arctic-dusk.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 711,
+    "slug": "arctic-dusk-50ml",
+    "name": "Arctic Dusk 50ml",
+    "fragranceName": "Arctic Dusk",
+    "fragranceSlug": "arctic-dusk",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB210-1",
+    "images": [
+      "2025/11/arctic-dusk-2.jpeg",
+      "2025/11/arctic-dusk-1.jpeg",
+      "2025/11/arctic-dusk-3.jpeg",
+      "2025/11/arctic-dusk.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 126,
+    "slug": "aurora-flame",
+    "name": "Aurora Flame 100ml",
+    "fragranceName": "Aurora Flame",
+    "fragranceSlug": "aurora-flame",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE310",
+    "images": [
+      "2025/11/aurora-flame.jpeg",
+      "2025/11/aurora-flame-1.jpeg",
+      "2025/11/aurora-flame-2.jpeg",
+      "2025/11/aurora-flame-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 579,
+    "slug": "aurora-flame-2ml-sample",
+    "name": "Aurora Flame 2ml Sample",
+    "fragranceName": "Aurora Flame",
+    "fragranceSlug": "aurora-flame",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE312",
+    "images": [
+      "2025/11/aurora-flame-3.jpeg",
+      "2025/11/aurora-flame-1.jpeg",
+      "2025/11/aurora-flame-2.jpeg",
+      "2025/11/aurora-flame.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 575,
+    "slug": "aurora-flame-50ml",
+    "name": "Aurora Flame 50ml",
+    "fragranceName": "Aurora Flame",
+    "fragranceSlug": "aurora-flame",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE311",
+    "images": [
+      "2025/11/aurora-flame-2.jpeg",
+      "2025/11/aurora-flame-1.jpeg",
+      "2025/11/aurora-flame-3.jpeg",
+      "2025/11/aurora-flame.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 64,
+    "slug": "aurora-haze",
+    "name": "Aurora Haze 100ml",
+    "fragranceName": "Aurora Haze",
+    "fragranceSlug": "aurora-haze",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE110",
+    "images": [
+      "2025/11/aurora-haze.jpeg",
+      "2025/11/aurora-haze-1.jpeg",
+      "2025/11/aurora-haze-2.jpeg",
+      "2025/11/aurora-haze-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 652,
+    "slug": "aurora-haze-2ml-sample",
+    "name": "Aurora Haze 2ml Sample",
+    "fragranceName": "Aurora Haze",
+    "fragranceSlug": "aurora-haze",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE110-2",
+    "images": [
+      "2025/11/aurora-haze-3.jpeg",
+      "2025/11/aurora-haze-1.jpeg",
+      "2025/11/aurora-haze-2.jpeg",
+      "2025/11/aurora-haze.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 648,
+    "slug": "aurora-haze-50ml",
+    "name": "Aurora Haze 50ml",
+    "fragranceName": "Aurora Haze",
+    "fragranceSlug": "aurora-haze",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE110-1",
+    "images": [
+      "2025/11/aurora-haze-2.jpeg",
+      "2025/11/aurora-haze-1.jpeg",
+      "2025/11/aurora-haze-3.jpeg",
+      "2025/11/aurora-haze.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 198,
+    "slug": "celestial-frost",
+    "name": "Celestial Frost 100ml",
+    "fragranceName": "Celestial Frost",
+    "fragranceSlug": "celestial-frost",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB310",
+    "images": [
+      "2025/11/celestial-frost.jpeg",
+      "2025/11/celestial-frost-1.jpeg",
+      "2025/11/celestial-frost-2.jpeg",
+      "2025/11/celestial-frost-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 722,
+    "slug": "celestial-frost-2ml-sample",
+    "name": "Celestial Frost 2ml Sample",
+    "fragranceName": "Celestial Frost",
+    "fragranceSlug": "celestial-frost",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB310-2",
+    "images": [
+      "2025/11/celestial-frost-3.jpeg",
+      "2025/11/celestial-frost-1.jpeg",
+      "2025/11/celestial-frost-2.jpeg",
+      "2025/11/celestial-frost.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 718,
+    "slug": "celestial-frost-50ml",
+    "name": "Celestial Frost 50ml",
+    "fragranceName": "Celestial Frost",
+    "fragranceSlug": "celestial-frost",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB310-1",
+    "images": [
+      "2025/11/celestial-frost-2.jpeg",
+      "2025/11/celestial-frost-1.jpeg",
+      "2025/11/celestial-frost-3.jpeg",
+      "2025/11/celestial-frost.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 186,
+    "slug": "celestial-surge",
+    "name": "Celestial Surge 100ml",
+    "fragranceName": "Celestial Surge",
+    "fragranceSlug": "celestial-surge",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE310",
+    "images": [
+      "2025/11/celestial-surge.jpeg",
+      "2025/11/celestial-surge-1.jpeg",
+      "2025/11/celestial-surge-2.jpeg",
+      "2025/11/celestial-surge-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 688,
+    "slug": "celestial-surge-2ml-sample",
+    "name": "Celestial Surge 2ml Sample",
+    "fragranceName": "Celestial Surge",
+    "fragranceSlug": "celestial-surge",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE310-2",
+    "images": [
+      "2025/11/celestial-surge-3.jpeg",
+      "2025/11/celestial-surge-1.jpeg",
+      "2025/11/celestial-surge-2.jpeg",
+      "2025/11/celestial-surge.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 684,
+    "slug": "celestial-surge-50ml",
+    "name": "Celestial Surge 50ml",
+    "fragranceName": "Celestial Surge",
+    "fragranceSlug": "celestial-surge",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE310-1",
+    "images": [
+      "2025/11/celestial-surge-2.jpeg",
+      "2025/11/celestial-surge-1.jpeg",
+      "2025/11/celestial-surge-3.jpeg",
+      "2025/11/celestial-surge.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 138,
+    "slug": "cobalt-shadow",
+    "name": "Cobalt Shadow 100ml",
+    "fragranceName": "Cobalt Shadow",
+    "fragranceSlug": "cobalt-shadow",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN310",
+    "images": [
+      "2025/11/cobalt-shadow.jpeg",
+      "2025/11/cobalt-shadow-1.jpeg",
+      "2025/11/cobalt-shadow-2.jpeg",
+      "2025/11/cobalt-shadow-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 755,
+    "slug": "cobalt-shadow-2ml-sample",
+    "name": "Cobalt Shadow 2ml Sample",
+    "fragranceName": "Cobalt Shadow",
+    "fragranceSlug": "cobalt-shadow",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN310-2",
+    "images": [
+      "2025/11/cobalt-shadow-3.jpeg",
+      "2025/11/cobalt-shadow-1.jpeg",
+      "2025/11/cobalt-shadow-2.jpeg",
+      "2025/11/cobalt-shadow.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 751,
+    "slug": "cobalt-shadow-50ml",
+    "name": "Cobalt Shadow 50ml",
+    "fragranceName": "Cobalt Shadow",
+    "fragranceSlug": "cobalt-shadow",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN310-1",
+    "images": [
+      "2025/11/cobalt-shadow-2.jpeg",
+      "2025/11/cobalt-shadow-1.jpeg",
+      "2025/11/cobalt-shadow-3.jpeg",
+      "2025/11/cobalt-shadow.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 91,
+    "slug": "crimson-dusk",
+    "name": "Crimson Dusk 100ml",
+    "fragranceName": "Crimson Dusk",
+    "fragranceSlug": "crimson-dusk",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE210",
+    "images": [
+      "2025/11/crimson-dusk.jpeg",
+      "2025/11/crimson-dusk-1.jpeg",
+      "2025/11/crimson-dusk-2.jpeg",
+      "2025/11/crimson-dusk-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 634,
+    "slug": "crimson-dusk-2ml-sample",
+    "name": "Crimson Dusk 2ml Sample",
+    "fragranceName": "Crimson Dusk",
+    "fragranceSlug": "crimson-dusk",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE210-2",
+    "images": [
+      "2025/11/crimson-dusk-3.jpeg",
+      "2025/11/crimson-dusk-1.jpeg",
+      "2025/11/crimson-dusk-2.jpeg",
+      "2025/11/crimson-dusk.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 630,
+    "slug": "crimson-dusk-50ml",
+    "name": "Crimson Dusk 50ml",
+    "fragranceName": "Crimson Dusk",
+    "fragranceSlug": "crimson-dusk",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE210-1",
+    "images": [
+      "2025/11/crimson-dusk-2.jpeg",
+      "2025/11/crimson-dusk-1.jpeg",
+      "2025/11/crimson-dusk-3.jpeg",
+      "2025/11/crimson-dusk.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 141,
+    "slug": "eclipse-verde",
+    "name": "Eclipse Verde 100ml",
+    "fragranceName": "Eclipse Verde",
+    "fragranceSlug": "eclipse-verde",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN410",
+    "images": [
+      "2025/11/eclipse-verde.jpeg",
+      "2025/11/eclipse-verde-1.jpeg",
+      "2025/11/eclipse-verde-2.jpeg",
+      "2025/11/eclipse-verde-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 764,
+    "slug": "eclipse-verde-2ml-sample",
+    "name": "Eclipse Verde 2ml Sample",
+    "fragranceName": "Eclipse Verde",
+    "fragranceSlug": "eclipse-verde",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN410-2",
+    "images": [
+      "2025/11/eclipse-verde-3.jpeg",
+      "2025/11/eclipse-verde-1.jpeg",
+      "2025/11/eclipse-verde-2.jpeg",
+      "2025/11/eclipse-verde.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 760,
+    "slug": "eclipse-verde-50ml",
+    "name": "Eclipse Verde 50ml",
+    "fragranceName": "Eclipse Verde",
+    "fragranceSlug": "eclipse-verde",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN410-1",
+    "images": [
+      "2025/11/eclipse-verde-2.jpeg",
+      "2025/11/eclipse-verde-1.jpeg",
+      "2025/11/eclipse-verde-3.jpeg",
+      "2025/11/eclipse-verde.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 129,
+    "slug": "ember-glow",
+    "name": "Ember Glow 100ml",
+    "fragranceName": "Ember Glow",
+    "fragranceSlug": "ember-glow",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE410",
+    "images": [
+      "2025/11/ember-glow.jpeg",
+      "2025/11/ember-glow-1.jpeg",
+      "2025/11/ember-glow-2.jpeg",
+      "2025/11/ember-glow-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 589,
+    "slug": "ember-glow-2ml-sample",
+    "name": "Ember Glow 2ml Sample",
+    "fragranceName": "Ember Glow",
+    "fragranceSlug": "ember-glow",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE412",
+    "images": [
+      "2025/11/ember-glow-3.jpeg",
+      "2025/11/ember-glow-1.jpeg",
+      "2025/11/ember-glow-2.jpeg",
+      "2025/11/ember-glow.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 585,
+    "slug": "ember-glow-50ml",
+    "name": "Ember Glow 50ml",
+    "fragranceName": "Ember Glow",
+    "fragranceSlug": "ember-glow",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE411",
+    "images": [
+      "2025/11/ember-glow-2.jpeg",
+      "2025/11/ember-glow-1.jpeg",
+      "2025/11/ember-glow.jpeg",
+      "2025/11/ember-glow-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 192,
+    "slug": "glacier-bloom",
+    "name": "Glacier Bloom 100ml",
+    "fragranceName": "Glacier Bloom",
+    "fragranceSlug": "glacier-bloom",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB110",
+    "images": [
+      "2025/11/glacier-bloom.jpeg",
+      "2025/11/glacier-bloom-1.jpeg",
+      "2025/11/glacier-bloom-2.jpeg",
+      "2025/11/glacier-bloom-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 706,
+    "slug": "glacier-bloom-2ml-sample",
+    "name": "Glacier Bloom 2ml Sample",
+    "fragranceName": "Glacier Bloom",
+    "fragranceSlug": "glacier-bloom",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB110-2",
+    "images": [
+      "2025/11/glacier-bloom-3.jpeg",
+      "2025/11/glacier-bloom-1.jpeg",
+      "2025/11/glacier-bloom-2.jpeg",
+      "2025/11/glacier-bloom.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 702,
+    "slug": "glacier-bloom-50ml",
+    "name": "Glacier Bloom 50ml",
+    "fragranceName": "Glacier Bloom",
+    "fragranceSlug": "glacier-bloom",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB110-1",
+    "images": [
+      "2025/11/glacier-bloom-2.jpeg",
+      "2025/11/glacier-bloom-1.jpeg",
+      "2025/11/glacier-bloom-3.jpeg",
+      "2025/11/glacier-bloom.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 67,
+    "slug": "golden-veil",
+    "name": "Golden Veil 100ml",
+    "fragranceName": "Golden Veil",
+    "fragranceSlug": "golden-veil",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE210",
+    "images": [
+      "2025/11/golden-veil.jpeg",
+      "2025/11/golden-veil-1.jpeg",
+      "2025/11/golden-veil-2.jpeg",
+      "2025/11/golden-veil-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 661,
+    "slug": "golden-veil-2ml-sample",
+    "name": "Golden Veil 2ml Sample",
+    "fragranceName": "Golden Veil",
+    "fragranceSlug": "golden-veil",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE210-2",
+    "images": [
+      "2025/11/golden-veil-3.jpeg",
+      "2025/11/golden-veil-1.jpeg",
+      "2025/11/golden-veil-2.jpeg",
+      "2025/11/golden-veil.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 657,
+    "slug": "golden-veil-50ml",
+    "name": "Golden Veil 50ml",
+    "fragranceName": "Golden Veil",
+    "fragranceSlug": "golden-veil",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE210-1",
+    "images": [
+      "2025/11/golden-veil-2.jpeg",
+      "2025/11/golden-veil-1.jpeg",
+      "2025/11/golden-veil-3.jpeg",
+      "2025/11/golden-veil.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 201,
+    "slug": "lunar-mist",
+    "name": "Lunar Mist 100ml",
+    "fragranceName": "Lunar Mist",
+    "fragranceSlug": "lunar-mist",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB410",
+    "images": [
+      "2025/11/lunar-mist.jpeg",
+      "2025/11/lunar-mist-1.jpeg",
+      "2025/11/lunar-mist-2.jpeg",
+      "2025/11/lunar-mist-3.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 731,
+    "slug": "lunar-mist-2ml-sample",
+    "name": "Lunar Mist 2ml Sample",
+    "fragranceName": "Lunar Mist",
+    "fragranceSlug": "lunar-mist",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB410-2",
+    "images": [
+      "2025/11/lunar-mist-3.jpeg",
+      "2025/11/lunar-mist-1.jpeg",
+      "2025/11/lunar-mist-2.jpeg",
+      "2025/11/lunar-mist.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 727,
+    "slug": "lunar-mist-50ml",
+    "name": "Lunar Mist 50ml",
+    "fragranceName": "Lunar Mist",
+    "fragranceSlug": "lunar-mist",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPEB410-1",
+    "images": [
+      "2025/11/lunar-mist-2.jpeg",
+      "2025/11/lunar-mist-1.jpeg",
+      "2025/11/lunar-mist-3.jpeg",
+      "2025/11/lunar-mist.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 132,
+    "slug": "midnight-azure",
+    "name": "Midnight Azure 100ml",
+    "fragranceName": "Midnight Azure",
+    "fragranceSlug": "midnight-azure",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN110",
+    "images": [
+      "2025/11/midnight-azure.jpeg",
+      "2025/11/midnight-azure-1.jpeg",
+      "2025/11/midnight-azure-2.jpeg",
+      "2025/11/midnight-azure-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 737,
+    "slug": "midnight-azure-2ml-sample",
+    "name": "Midnight Azure 2ml Sample",
+    "fragranceName": "Midnight Azure",
+    "fragranceSlug": "midnight-azure",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN110-2",
+    "images": [
+      "2025/11/midnight-azure-3.jpeg",
+      "2025/11/midnight-azure-1.jpeg",
+      "2025/11/midnight-azure-2.jpeg",
+      "2025/11/midnight-azure.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 733,
+    "slug": "midnight-azure-50ml",
+    "name": "Midnight Azure 50ml",
+    "fragranceName": "Midnight Azure",
+    "fragranceSlug": "midnight-azure",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN110-1",
+    "images": [
+      "2025/11/midnight-azure-2.jpeg",
+      "2025/11/midnight-azure-1.jpeg",
+      "2025/11/midnight-azure-3.jpeg",
+      "2025/11/midnight-azure.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 189,
+    "slug": "neptune-veil",
+    "name": "Neptune Veil 100ml",
+    "fragranceName": "Neptune Veil",
+    "fragranceSlug": "neptune-veil",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE410",
+    "images": [
+      "2025/11/neptune-veil.jpeg",
+      "2025/11/neptune-veil-1.jpeg",
+      "2025/11/neptune-veil-2.jpeg",
+      "2025/11/neptune-veil-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 697,
+    "slug": "neptune-veil-2ml-sample",
+    "name": "Neptune Veil 2ml Sample",
+    "fragranceName": "Neptune Veil",
+    "fragranceSlug": "neptune-veil",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE410-2",
+    "images": [
+      "2025/11/neptune-veil-3.jpeg",
+      "2025/11/neptune-veil-1.jpeg",
+      "2025/11/neptune-veil-2.jpeg",
+      "2025/11/neptune-veil.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 693,
+    "slug": "neptune-veil-50ml",
+    "name": "Neptune Veil 50ml",
+    "fragranceName": "Neptune Veil",
+    "fragranceSlug": "neptune-veil",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE410-1",
+    "images": [
+      "2025/11/neptune-veil-2.jpeg",
+      "2025/11/neptune-veil-1.jpeg",
+      "2025/11/neptune-veil-3.jpeg",
+      "2025/11/neptune-veil.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 82,
+    "slug": "nocturne-glow",
+    "name": "Nocturne Glow 100ml",
+    "fragranceName": "Nocturne Glow",
+    "fragranceSlug": "nocturne-glow",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA310",
+    "images": [
+      "2025/11/nocturne-glow.jpeg",
+      "2025/11/nocturne-glow-1.jpeg",
+      "2025/11/nocturne-glow-2.jpeg",
+      "2025/11/nocturne-glow-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 607,
+    "slug": "nocturne-glow-2ml-sample",
+    "name": "Nocturne Glow 2ml Sample",
+    "fragranceName": "Nocturne Glow",
+    "fragranceSlug": "nocturne-glow",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA310-2",
+    "images": [
+      "2025/11/nocturne-glow-3.jpeg",
+      "2025/11/nocturne-glow-1.jpeg",
+      "2025/11/nocturne-glow-2.jpeg",
+      "2025/11/nocturne-glow.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 603,
+    "slug": "nocturne-glow-50ml",
+    "name": "Nocturne Glow 50ml",
+    "fragranceName": "Nocturne Glow",
+    "fragranceSlug": "nocturne-glow",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA310-1",
+    "images": [
+      "2025/11/nocturne-glow-2.jpeg",
+      "2025/11/nocturne-glow-1.jpeg",
+      "2025/11/nocturne-glow-3.jpeg",
+      "2025/11/nocturne-glow.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 135,
+    "slug": "obsidian-tide",
+    "name": "Obsidian Tide 100ml",
+    "fragranceName": "Obsidian Tide",
+    "fragranceSlug": "obsidian-tide",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN210",
+    "images": [
+      "2025/11/obsidian-tide.jpeg",
+      "2025/11/obsidian-tide-1.jpeg",
+      "2025/11/obsidian-tide-2.jpeg",
+      "2025/11/obsidian-tide-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 746,
+    "slug": "obsidian-tide-2ml-sample",
+    "name": "Obsidian Tide 2ml Sample",
+    "fragranceName": "Obsidian Tide",
+    "fragranceSlug": "obsidian-tide",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN210-2",
+    "images": [
+      "2025/11/obsidian-tide-3.jpeg",
+      "2025/11/obsidian-tide-1.jpeg",
+      "2025/11/obsidian-tide-2.jpeg",
+      "2025/11/obsidian-tide.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 742,
+    "slug": "obsidian-tide-50ml",
+    "name": "Obsidian Tide 50ml",
+    "fragranceName": "Obsidian Tide",
+    "fragranceSlug": "obsidian-tide",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPVN210-1",
+    "images": [
+      "2025/11/obsidian-tide-2.jpeg",
+      "2025/11/obsidian-tide-1.jpeg",
+      "2025/11/obsidian-tide-3.jpeg",
+      "2025/11/obsidian-tide.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 70,
+    "slug": "peach-serenity",
+    "name": "Peach Serenity 100ml",
+    "fragranceName": "Peach Serenity",
+    "fragranceSlug": "peach-serenity",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE310",
+    "images": [
+      "2025/11/peach-serenity.jpeg",
+      "2025/11/peach-serenity-1.jpeg",
+      "2025/11/peach-serenity-2.jpeg",
+      "2025/11/peach-serenity-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 670,
+    "slug": "peach-serenity-2ml-sample",
+    "name": "Peach Serenity 2ml Sample",
+    "fragranceName": "Peach Serenity",
+    "fragranceSlug": "peach-serenity",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE310-2",
+    "images": [
+      "2025/11/peach-serenity-3.jpeg",
+      "2025/11/peach-serenity-1.jpeg",
+      "2025/11/peach-serenity-2.jpeg",
+      "2025/11/peach-serenity.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 666,
+    "slug": "peach-serenity-50ml",
+    "name": "Peach Serenity 50ml",
+    "fragranceName": "Peach Serenity",
+    "fragranceSlug": "peach-serenity",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPE310-1",
+    "images": [
+      "2025/11/peach-serenity-2.jpeg",
+      "2025/11/peach-serenity-1.jpeg",
+      "2025/11/peach-serenity-3.jpeg",
+      "2025/11/peach-serenity.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 88,
+    "slug": "solstice-bloom",
+    "name": "Solstice Bloom 100ml",
+    "fragranceName": "Solstice Bloom",
+    "fragranceSlug": "solstice-bloom",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE110",
+    "images": [
+      "2025/11/solstice-bloom.jpeg",
+      "2025/11/solstice-bloom-1.jpeg",
+      "2025/11/solstice-bloom-2.jpeg",
+      "2025/11/solstice-bloom-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 625,
+    "slug": "solstice-bloom-2ml-sample",
+    "name": "Solstice Bloom 2ml Sample",
+    "fragranceName": "Solstice Bloom",
+    "fragranceSlug": "solstice-bloom",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE110-2",
+    "images": [
+      "2025/11/solstice-bloom-3.jpeg",
+      "2025/11/solstice-bloom-1.jpeg",
+      "2025/11/solstice-bloom-2.jpeg",
+      "2025/11/solstice-bloom.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 621,
+    "slug": "solstice-bloom-50ml",
+    "name": "Solstice Bloom 50ml",
+    "fragranceName": "Solstice Bloom",
+    "fragranceSlug": "solstice-bloom",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPOE110-1",
+    "images": [
+      "2025/11/solstice-bloom-2.jpeg",
+      "2025/11/solstice-bloom-1.jpeg",
+      "2025/11/solstice-bloom-3.jpeg",
+      "2025/11/solstice-bloom.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 147,
+    "slug": "tidal-obscura",
+    "name": "Tidal Obscura 100ml",
+    "fragranceName": "Tidal Obscura",
+    "fragranceSlug": "tidal-obscura",
+    "size": "100ml",
+    "price": 250,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE210",
+    "images": [
+      "2025/11/tidal-obscura.jpeg",
+      "2025/11/tidal-obscura-1.jpeg",
+      "2025/11/tidal-obscura-2.jpeg",
+      "2025/11/tidal-obscura-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 782,
+    "slug": "tidal-obscura-2ml-sample",
+    "name": "Tidal Obscura 2ml Sample",
+    "fragranceName": "Tidal Obscura",
+    "fragranceSlug": "tidal-obscura",
+    "size": "2ml",
+    "price": 20,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE210-2",
+    "images": [
+      "2025/11/tidal-obscura-3.jpeg",
+      "2025/11/tidal-obscura-1.jpeg",
+      "2025/11/tidal-obscura-2.jpeg",
+      "2025/11/tidal-obscura.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 778,
+    "slug": "tidal-obscura-50ml",
+    "name": "Tidal Obscura 50ml",
+    "fragranceName": "Tidal Obscura",
+    "fragranceSlug": "tidal-obscura",
+    "size": "50ml",
+    "price": 125,
+    "category": "mens-fragrances",
+    "inStock": true,
+    "sku": "MPNE210-1",
+    "images": [
+      "2025/11/tidal-obscura-2.jpeg",
+      "2025/11/tidal-obscura-1.jpeg",
+      "2025/11/tidal-obscura-3.jpeg",
+      "2025/11/tidal-obscura.jpeg",
+      "2025/12/perfumes-placeholder-products.jpg"
+    ]
+  },
+  {
+    "id": 76,
+    "slug": "twilight-ember",
+    "name": "Twilight Ember 100ml",
+    "fragranceName": "Twilight Ember",
+    "fragranceSlug": "twilight-ember",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA110",
+    "images": [
+      "2025/11/twilight-ember.jpeg",
+      "2025/11/twilight-ember-1.jpeg",
+      "2025/11/twilight-ember-2.jpeg",
+      "2025/11/twilight-ember-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 643,
+    "slug": "twilight-ember-2ml-sample",
+    "name": "Twilight Ember 2ml Sample",
+    "fragranceName": "Twilight Ember",
+    "fragranceSlug": "twilight-ember",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA110-2",
+    "images": [
+      "2025/11/twilight-ember-3.jpeg",
+      "2025/11/twilight-ember-1.jpeg",
+      "2025/11/twilight-ember-2.jpeg",
+      "2025/11/twilight-ember.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 639,
+    "slug": "twilight-ember-50ml",
+    "name": "Twilight Ember 50ml",
+    "fragranceName": "Twilight Ember",
+    "fragranceSlug": "twilight-ember",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA110-1",
+    "images": [
+      "2025/11/twilight-ember-2.jpeg",
+      "2025/11/twilight-ember-1.jpeg",
+      "2025/11/twilight-ember-3.jpeg",
+      "2025/11/twilight-ember.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 79,
+    "slug": "violet-eclipse",
+    "name": "Violet Eclipse 100ml",
+    "fragranceName": "Violet Eclipse",
+    "fragranceSlug": "violet-eclipse",
+    "size": "100ml",
+    "price": 250,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA210",
+    "images": [
+      "2025/11/violet-eclipse.jpeg",
+      "2025/11/violet-eclipse-1.jpeg",
+      "2025/11/violet-eclipse-2.jpeg",
+      "2025/11/violet-eclipse-3.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 598,
+    "slug": "violet-eclipse-2ml-sample",
+    "name": "Violet Eclipse 2ml Sample",
+    "fragranceName": "Violet Eclipse",
+    "fragranceSlug": "violet-eclipse",
+    "size": "2ml",
+    "price": 20,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA212",
+    "images": [
+      "2025/11/violet-eclipse-3.jpeg",
+      "2025/11/violet-eclipse-1.jpeg",
+      "2025/11/violet-eclipse-2.jpeg",
+      "2025/11/violet-eclipse.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  },
+  {
+    "id": 594,
+    "slug": "violet-eclipse-50ml",
+    "name": "Violet Eclipse 50ml",
+    "fragranceName": "Violet Eclipse",
+    "fragranceSlug": "violet-eclipse",
+    "size": "50ml",
+    "price": 125,
+    "category": "womens-fragrances",
+    "inStock": true,
+    "sku": "WPCA211",
+    "images": [
+      "2025/11/violet-eclipse-2.jpeg",
+      "2025/11/violet-eclipse-1.jpeg",
+      "2025/11/violet-eclipse-3.jpeg",
+      "2025/11/violet-eclipse.jpeg",
+      "2025/11/perfumes-placeholder-products-opt.jpg"
+    ]
+  }
+]

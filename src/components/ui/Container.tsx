@@ -9,6 +9,9 @@ type ContainerProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export function Container({ className, width = 'default', ...props }: ContainerProps) {
   return (
-    <div className={cn('container-wd', width === 'post' && 'max-w-(--container-post)', className)} {...props} />
+    <div
+      className={cn('container-wd', width === 'post' && 'max-w-(--container-post)', className)}
+      {...props}
+    />
   )
 }

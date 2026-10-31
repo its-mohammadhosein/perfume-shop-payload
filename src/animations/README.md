@@ -13,6 +13,10 @@ Plain-JS animation modules. They will be rewritten with **GSAP** later, so compo
 
 ## Inventory
 
-| Module | Used by | GSAP notes |
-| ------ | ------- | ---------- |
-| `marquee.ts` | Home and About marquee | One infinite `xPercent` tween |
+| Module            | Used by                | Behaviour                                                                                  | GSAP notes                                                |
+| ----------------- | ---------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
+| `marquee.ts`      | Home and About marquee | Infinite horizontal loop, pauses off screen                                                | One infinite `xPercent` tween                             |
+| `stickyHeader.ts` | Header (every page)    | Fixed after scrolling, hides on scroll down, slides in on scroll up; switches overlap tone | ScrollTrigger `onUpdate` with direction; tween `yPercent` |
+| `scrollTop.ts`    | Scroll-to-top button   | Shows after 400px; smooth scroll to top                                                    | ScrollToPlugin                                            |
+
+**CSS-only (no module):** off-canvas slide and overlay fade (`OffCanvas`), mega menu fade and rise (`HeaderBar`), mobile drill-down slide (`MobileMenu`), featured-card zoom (`MegaMenu`).

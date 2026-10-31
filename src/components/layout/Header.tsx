@@ -1,16 +1,18 @@
-import Link from 'next/link'
+import { logos, mainNav, mobileNav, products } from '@/data'
 
-import { Container } from '@/components/ui/Container'
+import { HeaderSwitch } from './HeaderSwitch'
+import type { SearchItem } from './SearchForm'
 
-// Placeholder until Phase 2 (global layout)
+// Only what the client-side search needs, not the whole product data
+const searchItems: SearchItem[] = products.map((p) => ({
+  slug: p.slug,
+  name: p.name,
+  price: p.price,
+  image: p.images[0]!,
+}))
+
 export function Header() {
   return (
-    <header className="border-b-2 border-primary">
-      <Container className="flex h-(--header-h) items-center lg:h-(--header-h-lg)">
-        <Link href="/" className="text-xl font-medium">
-          Perfumes
-        </Link>
-      </Container>
-    </header>
+    <HeaderSwitch logos={logos} mobileNav={mobileNav} nav={mainNav} searchItems={searchItems} />
   )
 }

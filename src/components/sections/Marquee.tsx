@@ -29,7 +29,10 @@ export function Marquee({ items, duration = 45, className }: MarqueeProps) {
   const copy = Array.from({ length: 4 }, () => items).flat()
 
   return (
-    <div ref={ref} className={cn('overflow-hidden text-display font-medium text-heading', className)}>
+    <div
+      ref={ref}
+      className={cn('overflow-hidden text-display font-medium text-heading', className)}
+    >
       <p className="sr-only">{items.join(', ')}</p>
       <div aria-hidden="true" className="flex w-max will-change-transform" data-marquee-track>
         {[0, 1].map((half) => (

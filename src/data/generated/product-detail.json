@@ -1,0 +1,70 @@
+{
+  "slug": "abyss-bleu",
+  "shortDescription": "A dark, mysterious scent evoking the ocean’s deepest depths.",
+  "gallery": [
+    "2025/11/abyss-bleu.jpeg",
+    "2025/11/abyss-bleu-1.jpeg",
+    "2025/11/abyss-bleu-2.jpeg",
+    "2025/11/abyss-bleu-3.jpeg",
+    "2025/11/perfumes-placeholder-products-opt.jpg"
+  ],
+  "video": "2025/12/perfumes-product-video.webm",
+  "attributes": [
+    {
+      "label": "Collection",
+      "values": [
+        {
+          "name": "Nocturne Essence",
+          "slug": "nocturne-essence"
+        }
+      ]
+    },
+    {
+      "label": "Olfactive Family",
+      "values": [
+        {
+          "name": "Aldehyde",
+          "slug": "aldehyde"
+        },
+        {
+          "name": "Fresh",
+          "slug": "fresh"
+        }
+      ]
+    },
+    {
+      "label": "Perfume",
+      "values": [
+        {
+          "name": "For Him",
+          "slug": "for-him"
+        }
+      ]
+    }
+  ],
+  "collectionBlurb": {
+    "title": "Étheria Collection",
+    "image": "2025/11/prf-collection-etheria.jpg",
+    "videoUrl": "https://www.youtube.com/embed/LXb3EKWsInQ?feature=oembed&controls=1&autoplay=1",
+    "description": "Aurora Haze is a luminous, ethereal fragrance that captures the serene beauty of dawn. Opening with delicate citrus and dewy florals, it unfolds into a heart of soft amber and blooming jasmine, evoking the first golden rays of sunlight. A warm base of creamy sandalwood and subtle musk lingers on the skin, wrapping you in a gentle, radiant embrace. Elegant and uplifting, Aurora Haze is a scent that whispers of new beginnings and endless possibilities."
+  },
+  "notes": {
+    "top": [
+      "Bergamot",
+      "Pimento Berry",
+      "Oregano"
+    ],
+    "heart": [
+      "Amber",
+      "Citrus",
+      "Frankincense",
+      "Vanilla"
+    ],
+    "base": [
+      "Oud",
+      "Leather",
+      "Patchouli",
+      "Sandalwood"
+    ]
+  }
+}

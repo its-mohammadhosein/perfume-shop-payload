@@ -1,0 +1,559 @@
+{
+  "2018/10/avatar-home.jpg": {
+    "src": "/images/2018/10/avatar-home.jpg",
+    "width": 18,
+    "height": 18
+  },
+  "2025/10/prf-blog-post-1.jpg": {
+    "src": "/images/2025/10/prf-blog-post-1.webp",
+    "width": 1130,
+    "height": 480
+  },
+  "2025/10/prf-blog-post-2.jpg": {
+    "src": "/images/2025/10/prf-blog-post-2.webp",
+    "width": 555,
+    "height": 640
+  },
+  "2025/10/prf-blog-post-3.jpg": {
+    "src": "/images/2025/10/prf-blog-post-3.webp",
+    "width": 555,
+    "height": 640
+  },
+  "2025/11/abyss-bleu-1.jpeg": {
+    "src": "/images/2025/11/abyss-bleu-1.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/abyss-bleu-2.jpeg": {
+    "src": "/images/2025/11/abyss-bleu-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/abyss-bleu-3.jpeg": {
+    "src": "/images/2025/11/abyss-bleu-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/abyss-bleu.jpeg": {
+    "src": "/images/2025/11/abyss-bleu.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/amber-bloom-2.jpeg": {
+    "src": "/images/2025/11/amber-bloom-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/amber-bloom-3.jpeg": {
+    "src": "/images/2025/11/amber-bloom-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/amber-bloom.jpeg": {
+    "src": "/images/2025/11/amber-bloom.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/amethyst-haze-2.jpeg": {
+    "src": "/images/2025/11/amethyst-haze-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/amethyst-haze-3.jpeg": {
+    "src": "/images/2025/11/amethyst-haze-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/amethyst-haze.jpeg": {
+    "src": "/images/2025/11/amethyst-haze.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/arctic-dusk-2.jpeg": {
+    "src": "/images/2025/11/arctic-dusk-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/arctic-dusk-3.jpeg": {
+    "src": "/images/2025/11/arctic-dusk-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/arctic-dusk.jpeg": {
+    "src": "/images/2025/11/arctic-dusk.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/aurora-flame-2.jpeg": {
+    "src": "/images/2025/11/aurora-flame-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/aurora-flame-3.jpeg": {
+    "src": "/images/2025/11/aurora-flame-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/aurora-flame.jpeg": {
+    "src": "/images/2025/11/aurora-flame.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/aurora-haze-2.jpeg": {
+    "src": "/images/2025/11/aurora-haze-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/aurora-haze-3.jpeg": {
+    "src": "/images/2025/11/aurora-haze-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/aurora-haze.jpeg": {
+    "src": "/images/2025/11/aurora-haze.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/celestial-frost-2.jpeg": {
+    "src": "/images/2025/11/celestial-frost-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/celestial-frost-3.jpeg": {
+    "src": "/images/2025/11/celestial-frost-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/celestial-frost.jpeg": {
+    "src": "/images/2025/11/celestial-frost.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/celestial-surge-2.jpeg": {
+    "src": "/images/2025/11/celestial-surge-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/celestial-surge-3.jpeg": {
+    "src": "/images/2025/11/celestial-surge-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/celestial-surge.jpeg": {
+    "src": "/images/2025/11/celestial-surge.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/cobalt-shadow-2.jpeg": {
+    "src": "/images/2025/11/cobalt-shadow-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/cobalt-shadow-3.jpeg": {
+    "src": "/images/2025/11/cobalt-shadow-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/cobalt-shadow.jpeg": {
+    "src": "/images/2025/11/cobalt-shadow.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/crimson-dusk-2.jpeg": {
+    "src": "/images/2025/11/crimson-dusk-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/crimson-dusk-3.jpeg": {
+    "src": "/images/2025/11/crimson-dusk-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/crimson-dusk.jpeg": {
+    "src": "/images/2025/11/crimson-dusk.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/eclipse-verde-2.jpeg": {
+    "src": "/images/2025/11/eclipse-verde-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/eclipse-verde-3.jpeg": {
+    "src": "/images/2025/11/eclipse-verde-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/eclipse-verde.jpeg": {
+    "src": "/images/2025/11/eclipse-verde.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/ember-glow-2.jpeg": {
+    "src": "/images/2025/11/ember-glow-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/ember-glow-3.jpeg": {
+    "src": "/images/2025/11/ember-glow-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/ember-glow.jpeg": {
+    "src": "/images/2025/11/ember-glow.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/glacier-bloom-2.jpeg": {
+    "src": "/images/2025/11/glacier-bloom-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/glacier-bloom-3.jpeg": {
+    "src": "/images/2025/11/glacier-bloom-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/glacier-bloom.jpeg": {
+    "src": "/images/2025/11/glacier-bloom.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/golden-veil-2.jpeg": {
+    "src": "/images/2025/11/golden-veil-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/golden-veil-3.jpeg": {
+    "src": "/images/2025/11/golden-veil-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/golden-veil.jpeg": {
+    "src": "/images/2025/11/golden-veil.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/lunar-mist-2.jpeg": {
+    "src": "/images/2025/11/lunar-mist-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/lunar-mist-3.jpeg": {
+    "src": "/images/2025/11/lunar-mist-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/lunar-mist.jpeg": {
+    "src": "/images/2025/11/lunar-mist.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/midnight-azure-2.jpeg": {
+    "src": "/images/2025/11/midnight-azure-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/midnight-azure-3.jpeg": {
+    "src": "/images/2025/11/midnight-azure-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/midnight-azure.jpeg": {
+    "src": "/images/2025/11/midnight-azure.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/neptune-veil-2.jpeg": {
+    "src": "/images/2025/11/neptune-veil-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/neptune-veil-3.jpeg": {
+    "src": "/images/2025/11/neptune-veil-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/neptune-veil.jpeg": {
+    "src": "/images/2025/11/neptune-veil.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/nocturne-glow-2.jpeg": {
+    "src": "/images/2025/11/nocturne-glow-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/nocturne-glow-3.jpeg": {
+    "src": "/images/2025/11/nocturne-glow-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/nocturne-glow.jpeg": {
+    "src": "/images/2025/11/nocturne-glow.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/obsidian-tide-2.jpeg": {
+    "src": "/images/2025/11/obsidian-tide-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/obsidian-tide-3.jpeg": {
+    "src": "/images/2025/11/obsidian-tide-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/obsidian-tide.jpeg": {
+    "src": "/images/2025/11/obsidian-tide.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/peach-serenity-2.jpeg": {
+    "src": "/images/2025/11/peach-serenity-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/peach-serenity-3.jpeg": {
+    "src": "/images/2025/11/peach-serenity-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/peach-serenity.jpeg": {
+    "src": "/images/2025/11/peach-serenity.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/perfumes-placeholder-products-opt.jpg": {
+    "src": "/images/2025/11/perfumes-placeholder-products-opt.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/prf-about-us-1.jpg": {
+    "src": "/images/2025/11/prf-about-us-1.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "2025/11/prf-about-us-2-min.jpg": {
+    "src": "/images/2025/11/prf-about-us-2-min.jpg",
+    "width": 965,
+    "height": 1230
+  },
+  "2025/11/prf-blog-1.jpg": {
+    "src": "/images/2025/11/prf-blog-1.webp",
+    "width": 1200,
+    "height": 742
+  },
+  "2025/11/prf-blog-2.jpg": {
+    "src": "/images/2025/11/prf-blog-2.webp",
+    "width": 1200,
+    "height": 742
+  },
+  "2025/11/prf-blog-3.jpg": {
+    "src": "/images/2025/11/prf-blog-3.webp",
+    "width": 1200,
+    "height": 742
+  },
+  "2025/11/prf-blog-4.jpg": {
+    "src": "/images/2025/11/prf-blog-4.webp",
+    "width": 1200,
+    "height": 742
+  },
+  "2025/11/prf-blog-5.jpg": {
+    "src": "/images/2025/11/prf-blog-5.webp",
+    "width": 1200,
+    "height": 742
+  },
+  "2025/11/prf-blog-6.jpg": {
+    "src": "/images/2025/11/prf-blog-6.webp",
+    "width": 1200,
+    "height": 742
+  },
+  "2025/11/prf-collection-etheria.jpg": {
+    "src": "/images/2025/11/prf-collection-etheria.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "2025/11/prf-collection-opus-essence.jpg": {
+    "src": "/images/2025/11/prf-collection-opus-essence.jpg",
+    "width": 1920,
+    "height": 1080
+  },
+  "2025/11/prf-infobox-1.svg": {
+    "src": "/images/2025/11/prf-infobox-1.svg"
+  },
+  "2025/11/prf-infobox-2.svg": {
+    "src": "/images/2025/11/prf-infobox-2.svg"
+  },
+  "2025/11/prf-infobox-3.svg": {
+    "src": "/images/2025/11/prf-infobox-3.svg"
+  },
+  "2025/11/prf-infobox-4.svg": {
+    "src": "/images/2025/11/prf-infobox-4.svg"
+  },
+  "2025/11/prf-inst-1.jpg": {
+    "src": "/images/2025/11/prf-inst-1.webp",
+    "width": 512,
+    "height": 512
+  },
+  "2025/11/prf-inst-2.jpg": {
+    "src": "/images/2025/11/prf-inst-2.webp",
+    "width": 512,
+    "height": 512
+  },
+  "2025/11/prf-inst-3.jpg": {
+    "src": "/images/2025/11/prf-inst-3.webp",
+    "width": 512,
+    "height": 512
+  },
+  "2025/11/prf-inst-4.jpg": {
+    "src": "/images/2025/11/prf-inst-4.webp",
+    "width": 512,
+    "height": 512
+  },
+  "2025/11/prf-inst-5.jpg": {
+    "src": "/images/2025/11/prf-inst-5.webp",
+    "width": 512,
+    "height": 512
+  },
+  "2025/11/prf-inst-6.jpg": {
+    "src": "/images/2025/11/prf-inst-6.webp",
+    "width": 512,
+    "height": 512
+  },
+  "2025/11/prf-logotype-black.svg": {
+    "src": "/images/2025/11/prf-logotype-black.svg"
+  },
+  "2025/11/prf-logotype-white.svg": {
+    "src": "/images/2025/11/prf-logotype-white.svg"
+  },
+  "2025/11/prf-marquee-figure.svg": {
+    "src": "/images/2025/11/prf-marquee-figure.svg"
+  },
+  "2025/11/prf-slide-1-bottle-1-opt.png": {
+    "src": "/images/2025/11/prf-slide-1-bottle-1-opt.webp",
+    "width": 140,
+    "height": 350
+  },
+  "2025/11/prf-slide-2-bottle-1-opt.png": {
+    "src": "/images/2025/11/prf-slide-2-bottle-1-opt.webp",
+    "width": 140,
+    "height": 350
+  },
+  "2025/11/prf-slide-3-bottle-1-opt.png": {
+    "src": "/images/2025/11/prf-slide-3-bottle-1-opt.webp",
+    "width": 140,
+    "height": 350
+  },
+  "2025/11/prf-slide-banner-bg-2.jpg": {
+    "src": "/images/2025/11/prf-slide-banner-bg-2.webp",
+    "width": 900,
+    "height": 900
+  },
+  "2025/11/prf-slide-banner-bg-3.jpg": {
+    "src": "/images/2025/11/prf-slide-banner-bg-3.webp",
+    "width": 900,
+    "height": 900
+  },
+  "2025/11/ps-mtds.png": {
+    "src": "/images/2025/11/ps-mtds.webp",
+    "width": 350,
+    "height": 39
+  },
+  "2025/11/solstice-bloom-2.jpeg": {
+    "src": "/images/2025/11/solstice-bloom-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/solstice-bloom-3.jpeg": {
+    "src": "/images/2025/11/solstice-bloom-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/solstice-bloom.jpeg": {
+    "src": "/images/2025/11/solstice-bloom.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/tidal-obscura-2.jpeg": {
+    "src": "/images/2025/11/tidal-obscura-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/tidal-obscura-3.jpeg": {
+    "src": "/images/2025/11/tidal-obscura-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/tidal-obscura.jpeg": {
+    "src": "/images/2025/11/tidal-obscura.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/twilight-ember-2.jpeg": {
+    "src": "/images/2025/11/twilight-ember-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/twilight-ember-3.jpeg": {
+    "src": "/images/2025/11/twilight-ember-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/twilight-ember.jpeg": {
+    "src": "/images/2025/11/twilight-ember.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/violet-eclipse-2.jpeg": {
+    "src": "/images/2025/11/violet-eclipse-2.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/violet-eclipse-3.jpeg": {
+    "src": "/images/2025/11/violet-eclipse-3.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/violet-eclipse.jpeg": {
+    "src": "/images/2025/11/violet-eclipse.webp",
+    "width": 700,
+    "height": 800
+  },
+  "2025/11/wd-merchandise-long-arrow-black.svg": {
+    "src": "/images/2025/11/wd-merchandise-long-arrow-black.svg"
+  },
+  "2025/12/perfumes-product-video.webm": {
+    "src": "/images/2025/12/perfumes-product-video.webm"
+  },
+  "2025/12/prf-latest-collections-banner-1-opt.jpg": {
+    "src": "/images/2025/12/prf-latest-collections-banner-1-opt.webp",
+    "width": 900,
+    "height": 900
+  },
+  "2025/12/prf-latest-collections-banner-2-opt.jpg": {
+    "src": "/images/2025/12/prf-latest-collections-banner-2-opt.webp",
+    "width": 900,
+    "height": 900
+  },
+  "2025/12/prf-slide-1-bg-ov.jpg": {
+    "src": "/images/2025/12/prf-slide-1-bg-ov.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "2025/12/prf-slide-2-bg-ov.jpg": {
+    "src": "/images/2025/12/prf-slide-2-bg-ov.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "2025/12/prf-slide-3-bg-ov.jpg": {
+    "src": "/images/2025/12/prf-slide-3-bg-ov.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "2025/12/prf-slide-banner-bg-1.jpg": {
+    "src": "/images/2025/12/prf-slide-banner-bg-1.webp",
+    "width": 900,
+    "height": 900
+  }
+}

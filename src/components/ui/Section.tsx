@@ -10,7 +10,11 @@ type SectionProps = React.HTMLAttributes<HTMLElement> & {
 export function Section({ className, spacing = 'section', ...props }: SectionProps) {
   return (
     <section
-      className={cn(spacing === 'section' && 'mb-section', spacing === 'block' && 'mb-block', className)}
+      className={cn(
+        spacing === 'section' && 'mb-section',
+        spacing === 'block' && 'mb-block',
+        className,
+      )}
       {...props}
     />
   )

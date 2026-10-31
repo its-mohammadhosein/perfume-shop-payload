@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "scent-sensibility",
+    "title": "Scent & Sensibility",
+    "date": "2025-10-28",
+    "category": "Perfumes",
+    "image": "2025/11/prf-blog-1.jpg"
+  },
+  {
+    "slug": "notes-of-elegance",
+    "title": "Notes of Elegance",
+    "date": "2025-10-12",
+    "category": "Perfumes",
+    "image": "2025/11/prf-blog-2.jpg"
+  },
+  {
+    "slug": "the-perfume-journal",
+    "title": "The Perfume Journal",
+    "date": "2025-10-08",
+    "category": "Perfumes",
+    "image": "2025/11/prf-blog-3.jpg"
+  },
+  {
+    "slug": "beyond-the-bottle",
+    "title": "Beyond the Bottle",
+    "date": "2025-10-03",
+    "category": "Perfumes",
+    "image": "2025/11/prf-blog-4.jpg"
+  },
+  {
+    "slug": "aroma-diaries",
+    "title": "Aroma Diaries",
+    "date": "2025-09-28",
+    "category": "Perfumes",
+    "image": "2025/11/prf-blog-5.jpg"
+  },
+  {
+    "slug": "essence-allure",
+    "title": "Essence & Allure",
+    "date": "2025-09-21",
+    "category": "Perfumes",
+    "image": "2025/11/prf-blog-6.jpg"
+  }
+]

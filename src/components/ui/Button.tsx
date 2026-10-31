@@ -13,9 +13,12 @@ const buttonVariants = cva(
         primary: 'bg-primary text-white hover:bg-primary-hover hover:text-white',
         black:
           'bg-ink text-white hover:text-white hover:shadow-[inset_0_0_0_1000px_rgb(0_0_0/10%)]',
-        white: 'border border-white/50 bg-white text-title hover:border-white hover:bg-white-hover hover:text-title',
-        bordered: 'border-2 border-[#e9e9e9] bg-transparent text-title hover:border-ink hover:bg-ink hover:text-white',
-        outline: 'border border-primary bg-transparent text-primary hover:bg-primary hover:text-white',
+        white:
+          'border border-white/50 bg-white text-title hover:border-white hover:bg-white-hover hover:text-title',
+        bordered:
+          'border-2 border-[#e9e9e9] bg-transparent text-title hover:border-ink hover:bg-ink hover:text-white',
+        outline:
+          'border border-primary bg-transparent text-primary hover:bg-primary hover:text-white',
         link: 'border-0 border-b-2 border-current bg-transparent text-title hover:text-body',
         default: 'bg-muted text-title hover:bg-muted-hover hover:text-title',
       },
@@ -54,11 +57,23 @@ export type ButtonProps = ButtonAsButton | ButtonAsLink
 export function Button(props: ButtonProps) {
   if (props.href !== undefined) {
     const { className, variant, size, fullWidth, href, ...rest } = props
-    return <Link className={cn(buttonVariants({ variant, size, fullWidth }), className)} href={href} {...rest} />
+    return (
+      <Link
+        className={cn(buttonVariants({ variant, size, fullWidth }), className)}
+        href={href}
+        {...rest}
+      />
+    )
   }
 
   const { className, variant, size, fullWidth, type = 'button', ...rest } = props
-  return <button className={cn(buttonVariants({ variant, size, fullWidth }), className)} type={type} {...rest} />
+  return (
+    <button
+      className={cn(buttonVariants({ variant, size, fullWidth }), className)}
+      type={type}
+      {...rest}
+    />
+  )
 }
 
 export { buttonVariants }
