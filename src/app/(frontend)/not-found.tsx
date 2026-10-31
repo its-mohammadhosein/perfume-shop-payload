@@ -1,17 +1,15 @@
-import { Button } from '@/components/ui/Button'
+import { EmptyState } from '@/components/commerce/EmptyState'
 import { Container } from '@/components/ui/Container'
-import { Heading } from '@/components/ui/Heading'
 
 export default function NotFound() {
   return (
-    <Container className="flex flex-col items-center py-28 text-center">
-      <Heading as="h1" size="page" className="mb-5">
-        404
-      </Heading>
-      <p className="mb-8">This page could not be found.</p>
-      <Button href="/shop" variant="primary" size="lg">
-        Return to shop
-      </Button>
+    <Container className="py-20 lg:py-[120px]">
+      <EmptyState
+        as="h1"
+        icon={<span className="font-medium">404</span>}
+        text="It looks like nothing was found at this location. The page may have moved, or the link may be out of date."
+        title="Page not found"
+      />
     </Container>
   )
 }

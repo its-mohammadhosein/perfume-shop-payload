@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import { PostCard } from '@/components/blog/PostCard'
 import { Container } from '@/components/ui/Container'
-import { Heading } from '@/components/ui/Heading'
+import { PageTitle } from '@/components/ui/PageTitle'
 import { posts } from '@/data'
 
 export const metadata: Metadata = {
@@ -13,12 +13,7 @@ export const metadata: Metadata = {
 export default function JournalPage() {
   return (
     <>
-      {/* Small page title (WoodMart "title-size-small") */}
-      <Container className="py-[15px] lg:py-5">
-        <Heading as="h1" size="page">
-          Journal
-        </Heading>
-      </Container>
+      <PageTitle>Journal</PageTitle>
 
       <Container className="py-10">
         <div className="grid gap-5 md:grid-cols-3">

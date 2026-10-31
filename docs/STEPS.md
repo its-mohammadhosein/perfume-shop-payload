@@ -324,7 +324,9 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 
 ---
 
-## Phase 9 — Utility pages
+## Phase 9 — Utility pages ✅
+
+> **As built:** shared pieces: `ui/PageTitle` (also used by `/journal`), `ui/Field` (+ `fieldClass`, `labelClass`, `Required`), `ui/StaticForm` (submit only swaps in a thank-you message; `CommentForm` uses it too), `commerce/EmptyState`, `commerce/CheckoutSteps`. Empty-state icons and the step arrow are woodmart-font glyphs (`emptyCart`, `heart`, `compare`, `arrowRight`). The info pages live at `(info)/[slug]`; `/faq` reuses the About FAQ. `/fragrances` reuses `CollectionBanners` for all six collections. The order review box (`bg-muted`, 30px padding) and the account / compare / contact layouts follow WoodMart defaults, since the html base has no reference for them. **404s:** the app has two root layouts (site and Payload admin), so unmatched URLs skipped the site layout and showed Next's bare default page. `(frontend)/[...missing]/page.tsx` calls `notFound()` so every unknown URL gets the styled 404 inside the header and footer; `/admin` and `/api` still go to Payload.
 
 | Step | Route | Content |
 | ---- | ----- | ------- |
@@ -368,3 +370,4 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 6.1–6.7 | `/product/[slug]` for all 72 products (static params, metadata, 404 for unknown slugs). `ProductGallery` (+ lightbox), `SizeSwitcher`, `AddToCart` (UI only), `ProductAttributes`, `CollectionVideo`, `ProductNotes`. Data: `Product.video`, `collectionVideoUrl`. Screenshot check at 1440px and 390px: lightbox opens and closes with Esc, no console errors. |
 | 2026-10-31 | 7.1–7.3 | `/journal` (6 cards, 3 columns) and `/journal/[slug]` (6 static params, 404 for unknown slugs). `PostContent`, `AuthorBio`, `PostTags`, `ShareButtons`, `PostNav`, `CommentForm` (static). Extractor and data updated for two-column rows. Screenshot check at 1440px and 390px against the html base: page heights within 26px, no console errors, no horizontal overflow; related-posts arrows checked by hover and click. |
 | 2026-10-31 | 8.1–8.5 | `/about-us`: intro, marquee, Our Story + FAQ accordion, Why Choose WoodMart cards (1 / 2 / 4 per row), Instagram strip. Screenshot check at 1440px, 900px and 390px against the html base: page height within 46px, no console errors, no horizontal overflow; FAQ open / close checked by clicking. |
+| 2026-10-31 | 9.1–9.6 | `/cart`, `/wishlist`, `/compare` (empty states), `/checkout` (billing form + DUMMY order), `/my-account` (login / register), `/fragrances`, `/contact-us`, `/faq`, `/refund`, `/cookies`, `/terms`, `/privacy`, styled 404 with a catch-all route. Every internal link in the header, menus and footer returns 200; unknown URLs return a styled 404. Cart and wishlist compared with the html base at 1440px; all new pages checked at 390px with no horizontal overflow and no console errors. |
