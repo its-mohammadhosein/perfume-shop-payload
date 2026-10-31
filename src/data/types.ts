@@ -71,10 +71,13 @@ export type Product = Dummy & {
   video?: FileAsset
 }
 
-export type PostBlock =
+type PostFlowBlock =
   | { type: 'heading'; text: string }
   | { type: 'paragraph'; text: string }
   | { type: 'image'; image: ImageAsset }
+
+/** Flow content, plus side-by-side rows (text | image) */
+export type PostBlock = PostFlowBlock | { type: 'columns'; columns: PostFlowBlock[][] }
 
 export type Author = Dummy & {
   slug: string

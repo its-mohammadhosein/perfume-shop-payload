@@ -294,7 +294,9 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 
 ---
 
-## Phase 7 — Journal
+## Phase 7 — Journal ✅
+
+> **As built:** the extractor now keeps the source's two-column rows, so `PostBlock` has a `columns` type (text | image, stacked ≤768px). Post body headings use the source's `1.6em` title size; a heading straight after a paragraph gets the 80/60/40 gap ("Final Thoughts"). Share icons, the comment bubble and the "back to list" grid are glyphs taken from the source's woodmart-font (`components/ui/wdGlyphs.ts`, `WdIcon`). The author avatar is a grey placeholder because the source's Gravatar was not mirrored. Tags link to `/journal` because there are no tag archives. `Carousel` gained `arrowPosition="sides"` (50px arrows beside the track that slide in on hover, desktop only) and `titleClassName`; `PostCard` gained `aspect="wide"` (1024×633) and `priority`.
 
 | Step | Part | Key specs |
 | ---- | ---- | --------- |
@@ -362,3 +364,4 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 4.1–4.10 | Home page: hero slider (`animations/heroSlider.ts`, 5s autoplay as in the source), New In, olfactory family buttons, marquee (spacing matched to the source), featured fragrances, promotional tabs, collection banners, journal carousel, Instagram strip. Built from the source block CSS; one screenshot check at 1440px and 390px with no console errors. |
 | 2026-10-31 | 5.1–5.2 | `/shop`, `/shop/page/[2-6]`, `/collection/[slug]` (6), `/olfactive-family/[slug]` (9). `ArchivePage`, `FilterSidebar` (Category, Price (static), Collection, Olfactive family, Stock status), `ShopFilters` off-canvas. Route statuses checked (page 7 and unknown slugs return 404). One screenshot check, no console errors. |
 | 2026-10-31 | 6.1–6.7 | `/product/[slug]` for all 72 products (static params, metadata, 404 for unknown slugs). `ProductGallery` (+ lightbox), `SizeSwitcher`, `AddToCart` (UI only), `ProductAttributes`, `CollectionVideo`, `ProductNotes`. Data: `Product.video`, `collectionVideoUrl`. Screenshot check at 1440px and 390px: lightbox opens and closes with Esc, no console errors. |
+| 2026-10-31 | 7.1–7.3 | `/journal` (6 cards, 3 columns) and `/journal/[slug]` (6 static params, 404 for unknown slugs). `PostContent`, `AuthorBio`, `PostTags`, `ShareButtons`, `PostNav`, `CommentForm` (static). Extractor and data updated for two-column rows. Screenshot check at 1440px and 390px against the html base: page heights within 26px, no console errors, no horizontal overflow; related-posts arrows checked by hover and click. |

@@ -11,12 +11,19 @@ export const author: Author = {
   avatar: image(body.author.avatar, body.author.name),
 }
 
-function toBlocks(blocks: typeof body.blocks): PostBlock[] {
-  return blocks.map((b) =>
-    b.type === 'image'
-      ? { type: 'image', image: image(b.image!, '') }
-      : { type: b.type as 'heading' | 'paragraph', text: b.text! },
-  )
+type RawBlock = { type: string; text?: string; image?: string; columns?: RawBlock[][] }
+
+function toBlock(b: RawBlock): PostBlock {
+  if (b.type === 'columns') {
+    return { type: 'columns', columns: b.columns!.map((col) => col.map(toFlowBlock)) }
+  }
+  return toFlowBlock(b)
+}
+
+function toFlowBlock(b: RawBlock): Exclude<PostBlock, { type: 'columns' }> {
+  return b.type === 'image'
+    ? { type: 'image', image: image(b.image!, '') }
+    : { type: b.type as 'heading' | 'paragraph', text: b.text! }
 }
 
 // DUMMY body for posts that are not mirrored; same rhythm as the real one
@@ -37,11 +44,18 @@ function dummyBlocks(title: string): PostBlock[] {
       type: 'paragraph',
       text: 'A signature scent should feel effortless. Start with the families you are naturally drawn to, test on skin rather than paper, and give each fragrance time to settle before deciding. The right one will feel like an extension of you.',
     },
-    { type: 'image', image: image('2025/10/prf-blog-post-2.jpg') },
-    { type: 'heading', text: '3. Wearing Fragrance Well' },
     {
-      type: 'paragraph',
-      text: 'Apply to pulse points, avoid rubbing your wrists together, and remember that less is often more. Store bottles away from heat and light so the composition stays true from the first spray to the last.',
+      type: 'columns',
+      columns: [
+        [
+          { type: 'heading', text: '3. Wearing Fragrance Well' },
+          {
+            type: 'paragraph',
+            text: 'Apply to pulse points, avoid rubbing your wrists together, and remember that less is often more. Store bottles away from heat and light so the composition stays true from the first spray to the last.',
+          },
+        ],
+        [{ type: 'image', image: image('2025/10/prf-blog-post-2.jpg') }],
+      ],
     },
     { type: 'heading', text: 'Final Thoughts' },
     {
@@ -60,7 +74,7 @@ const excerptOf = (blocks: PostBlock[]) => {
 // Newest first, as on the journal page
 export const posts: Post[] = scraped.map((p) => {
   const isReal = p.slug === body.slug
-  const blocks = isReal ? toBlocks(body.blocks) : dummyBlocks(p.title)
+  const blocks = isReal ? (body.blocks as RawBlock[]).map(toBlock) : dummyBlocks(p.title)
   return {
     slug: p.slug,
     title: p.title,
@@ -89,11 +103,20 @@ export function getRelatedPosts(slug: string, limit = 5): Post[] {
   return posts.filter((p) => p.slug !== slug).slice(0, limit)
 }
 
+/** `short`: "28 Oct 2025" (cards); `long`: "October 28, 2025" (single post) */
 export function formatPostDate(date: string, style: 'short' | 'long' = 'short'): string {
-  return new Date(`${date}T00:00:00Z`).toLocaleDateString('en-GB', {
-    day: '2-digit',
-    month: style === 'short' ? 'short' : 'long',
-    year: 'numeric',
-    timeZone: 'UTC',
-  })
+  const d = new Date(`${date}T00:00:00Z`)
+  return style === 'short'
+    ? d.toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })
+    : d.toLocaleDateString('en-US', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })
 }

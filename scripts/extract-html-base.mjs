@@ -250,10 +250,21 @@ function parsePostCards(html) {
   return [...seen.values()]
 }
 
-function parsePostBody(html) {
-  const body = stripNoise(between(html, 'class="wd-single-post-content', '<h4'))
+/** Index just past the `</div>` that closes the `<div` starting at `start` */
+function closingDiv(html, start) {
+  const tag = /<div\b|<\/div>/g
+  tag.lastIndex = start
+  let depth = 0
+  for (let m; (m = tag.exec(html));) {
+    depth += m[0] === '</div>' ? -1 : 1
+    if (depth === 0) return tag.lastIndex
+  }
+  return html.length
+}
+
+function parseFlow(html) {
   const blocks = []
-  for (const m of body.matchAll(
+  for (const m of html.matchAll(
     /<h2[^>]*>([\s\S]*?)<\/h2>|<p[^>]*>([\s\S]*?)<\/p>|<img[^>]*src="([^"]+)"[^>]*>/g,
   )) {
     if (m[1]) blocks.push({ type: 'heading', text: text(m[1]) })
@@ -263,6 +274,27 @@ function parsePostBody(html) {
       if (key) blocks.push({ type: 'image', image: key })
     }
   }
+  return blocks
+}
+
+function parsePostBody(html) {
+  const body = stripNoise(between(html, 'class="wd-single-post-content', '<h4'))
+  // Two-column rows (text | image) become a `columns` block; everything else is plain flow
+  const blocks = []
+  let pos = 0
+  for (const row of body.matchAll(/<div[^>]*class="wp-block-wd-row"[^>]*>/g)) {
+    if (row.index < pos) continue
+    blocks.push(...parseFlow(body.slice(pos, row.index)))
+    const end = closingDiv(body, row.index)
+    const inner = body.slice(row.index + row[0].length, end)
+    const columns = []
+    for (const col of inner.matchAll(/<div[^>]*class="wp-block-wd-column"[^>]*>/g)) {
+      columns.push(parseFlow(inner.slice(col.index, closingDiv(inner, col.index))))
+    }
+    blocks.push({ type: 'columns', columns })
+    pos = end
+  }
+  blocks.push(...parseFlow(body.slice(pos)))
   const authorHtml = between(html, '<h4', 'View all posts')
   return {
     slug: 'scent-sensibility',

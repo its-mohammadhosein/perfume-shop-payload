@@ -75,7 +75,9 @@ describe('static data', () => {
       'essence-allure',
     ])
     expect(posts[0]!.dummy).toBeUndefined()
-    expect(posts[0]!.blocks.filter((b) => b.type === 'heading')).toHaveLength(6)
+    const flat = posts[0]!.blocks.flatMap((b) => (b.type === 'columns' ? b.columns.flat() : [b]))
+    expect(flat.filter((b) => b.type === 'heading')).toHaveLength(6)
+    expect(posts[0]!.blocks.filter((b) => b.type === 'columns')).toHaveLength(2)
   })
 
   it('points every image at a file in public/', () => {

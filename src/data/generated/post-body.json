@@ -18,16 +18,25 @@
       "text": "A signature scent is like a second skin, effortlessly blending with your natural aura. Light, fresh fragrances with citrus, musk, or floral notes work well for daily wear, providing a subtle yet elegant presence. These scents are ideal for professional environments, casual meet-ups, or even a relaxing day at home. Unlike overpowering perfumes that demand attention, a good everyday fragrance enhances your natural essence without overwhelming those around you. Clean, subtle, and timeless—this type of fragrance is designed to feel refreshing yet sophisticated, allowing you to wear it comfortably in any situation."
     },
     {
-      "type": "heading",
-      "text": "2. Romantic Evenings – Captivating & Sensual"
-    },
-    {
-      "type": "paragraph",
-      "text": "For intimate dinners, date nights, or special romantic occasions, a fragrance should be alluring, deep, and unforgettable. Rich, seductive scents create an intimate and sensual atmosphere, helping to enhance your presence in a subtle yet irresistible way. Warm, deep notes like amber, vanilla, and exotic florals add an element of mystery and attraction, drawing people in with their alluring depth. These fragrances leave a lasting trail and become associated with fond memories, making them perfect for evenings where you want to make an impression that lingers long after the night ends."
-    },
-    {
-      "type": "image",
-      "image": "2025/10/prf-blog-post-2.jpg"
+      "type": "columns",
+      "columns": [
+        [
+          {
+            "type": "heading",
+            "text": "2. Romantic Evenings – Captivating & Sensual"
+          },
+          {
+            "type": "paragraph",
+            "text": "For intimate dinners, date nights, or special romantic occasions, a fragrance should be alluring, deep, and unforgettable. Rich, seductive scents create an intimate and sensual atmosphere, helping to enhance your presence in a subtle yet irresistible way. Warm, deep notes like amber, vanilla, and exotic florals add an element of mystery and attraction, drawing people in with their alluring depth. These fragrances leave a lasting trail and become associated with fond memories, making them perfect for evenings where you want to make an impression that lingers long after the night ends."
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "image": "2025/10/prf-blog-post-2.jpg"
+          }
+        ]
+      ]
     },
     {
       "type": "heading",
@@ -38,16 +47,25 @@
       "text": "When attending an important business meeting, corporate event, or high-profile gathering, your fragrance should exude confidence, power, and sophistication. Woody, spicy, or oriental scents create a strong yet refined aura that speaks to ambition and self-assurance. These fragrances are designed to be bold and striking, without being overpowering. The right scent can subtly command attention and leave an impression of professionalism and strength. Choosing a rich, full-bodied fragrance for these occasions can reinforce your presence and add a sense of authority to your overall appearance."
     },
     {
-      "type": "image",
-      "image": "2025/10/prf-blog-post-3.jpg"
-    },
-    {
-      "type": "heading",
-      "text": "4. Refreshing & Uplifting – Summer & Vacation Scents"
-    },
-    {
-      "type": "paragraph",
-      "text": "Warm weather calls for light, breezy fragrances that feel as refreshing as a cool breeze on a summer afternoon. Citrusy, marine, and tropical floral notes evoke images of sunshine, sandy beaches, and carefree moments, making them ideal for vacations or outdoor activities. These scents are energizing and uplifting, enhancing the joy and relaxation associated with travel and leisure. A well-chosen summer fragrance keeps you feeling fresh all day long, even in the heat, offering an effortless yet vibrant scent that complements the bright, playful atmosphere of the season."
+      "type": "columns",
+      "columns": [
+        [
+          {
+            "type": "image",
+            "image": "2025/10/prf-blog-post-3.jpg"
+          }
+        ],
+        [
+          {
+            "type": "heading",
+            "text": "4. Refreshing & Uplifting – Summer & Vacation Scents"
+          },
+          {
+            "type": "paragraph",
+            "text": "Warm weather calls for light, breezy fragrances that feel as refreshing as a cool breeze on a summer afternoon. Citrusy, marine, and tropical floral notes evoke images of sunshine, sandy beaches, and carefree moments, making them ideal for vacations or outdoor activities. These scents are energizing and uplifting, enhancing the joy and relaxation associated with travel and leisure. A well-chosen summer fragrance keeps you feeling fresh all day long, even in the heat, offering an effortless yet vibrant scent that complements the bright, playful atmosphere of the season."
+          }
+        ]
+      ]
     },
     {
       "type": "heading",

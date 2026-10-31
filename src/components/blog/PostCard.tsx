@@ -8,6 +8,10 @@ import { cn } from '@/utilities/ui'
 type PostCardProps = {
   post: Post
   sizes?: string
+  /** `square`: 588×598 crop (journal grid, home); `wide`: 1024×633 (related posts) */
+  aspect?: 'square' | 'wide'
+  /** Load the image eagerly (first card above the fold) */
+  priority?: boolean
   className?: string
 }
 
@@ -15,6 +19,8 @@ type PostCardProps = {
 export function PostCard({
   post,
   sizes = '(min-width: 769px) 33vw, 100vw',
+  aspect = 'square',
+  priority,
   className,
 }: PostCardProps) {
   const href = `/journal/${post.slug}`
@@ -22,7 +28,10 @@ export function PostCard({
     <article className={cn('group/post', className)}>
       <Link
         aria-label={post.title}
-        className="relative mb-[18px] block aspect-[588/598] overflow-hidden bg-muted"
+        className={cn(
+          'relative mb-[18px] block overflow-hidden bg-muted',
+          aspect === 'square' ? 'aspect-[588/598]' : 'aspect-[1024/633]',
+        )}
         href={href}
         tabIndex={-1}
       >
@@ -30,6 +39,7 @@ export function PostCard({
           alt={post.image.alt}
           className="object-cover transition-transform duration-500 group-hover/post:scale-105"
           fill
+          priority={priority}
           sizes={sizes}
           src={post.image.src}
         />
