@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 
 import { ArchivePage } from '@/components/archive/ArchivePage'
 import { collections, getProductsByCollection } from '@/data'
+import { notFoundMetadata, pageMetadata } from '@/utilities/pageMetadata'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -13,7 +14,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const collection = collections.find((c) => c.slug === slug)
-  return collection ? { title: collection.name, description: collection.summary } : {}
+  return collection
+    ? pageMetadata({
+        title: collection.name,
+        description: collection.summary,
+        path: `/collection/${slug}`,
+        image: collection.image,
+      })
+    : notFoundMetadata
 }
 
 export default async function CollectionPage({ params }: Props) {

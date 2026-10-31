@@ -22,7 +22,7 @@ export function ProductGrid({
   return (
     <ul
       className={cn(
-        'grid grid-cols-2 border-l border-line-card md:grid-cols-3 lg:grid-cols-4',
+        'grid grid-cols-2 border-l border-line-card md:grid-cols-4',
         topBorder && 'border-t',
         className,
       )}

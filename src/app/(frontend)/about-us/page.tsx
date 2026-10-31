@@ -8,11 +8,14 @@ import { Container } from '@/components/ui/Container'
 import { Heading } from '@/components/ui/Heading'
 import { Section } from '@/components/ui/Section'
 import { aboutIntro, aboutStory, faq, instagram, marqueeWords, whyChoose } from '@/data'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'About Us',
   description: aboutIntro.text,
-}
+  path: '/about-us',
+  image: aboutIntro.image,
+})
 
 export default function AboutPage() {
   return (

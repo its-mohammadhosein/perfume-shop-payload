@@ -9,8 +9,13 @@ import { PageTitle } from '@/components/ui/PageTitle'
 import { formatPrice } from '@/components/ui/Price'
 import { StaticForm } from '@/components/ui/StaticForm'
 import { checkoutOrder, getProduct } from '@/data'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = { title: 'Checkout' }
+export const metadata: Metadata = pageMetadata({
+  title: 'Checkout',
+  path: '/checkout',
+  noIndex: true,
+})
 
 const payments = [
   {

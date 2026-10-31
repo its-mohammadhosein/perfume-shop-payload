@@ -7,7 +7,7 @@ import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { getServerSideURL } from '@/utilities/getURL'
-import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
+import { pageMetadata, SITE_NAME } from '@/utilities/pageMetadata'
 
 import './globals.css'
 
@@ -44,11 +44,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   )
 }
 
+// Defaults for every page, minus the canonical URL (each page sets its own; a 404 has none)
+const { alternates: _canonical, ...siteDefaults } = pageMetadata({ path: '/' })
+
 export const metadata: Metadata = {
   metadataBase: new URL(getServerSideURL()),
   title: {
-    default: 'Perfumes',
-    template: '%s - Perfumes',
+    default: SITE_NAME,
+    template: `%s - ${SITE_NAME}`,
   },
-  openGraph: mergeOpenGraph(),
+  ...siteDefaults,
 }

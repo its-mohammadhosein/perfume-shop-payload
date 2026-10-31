@@ -3,20 +3,35 @@ import Link from 'next/link'
 
 import { Button } from '@/components/ui/Button'
 import type { CollectionBanner } from '@/data/types'
+import { cn } from '@/utilities/ui'
 
 /**
  * Two square collection banners. On hover the text block rises and the button fades in
  * (pure CSS, 0.3s / 0.4s like the html base). On touch sizes the button is always shown.
  */
-export function CollectionBanners({ banners }: { banners: CollectionBanner[] }) {
+export function CollectionBanners({
+  banners,
+  stackOnMobile = false,
+}: {
+  banners: CollectionBanner[]
+  /** Overview pages stack the banners; Home swipes them one at a time below 769px, like the source */
+  stackOnMobile?: boolean
+}) {
   return (
-    <div className="grid md:grid-cols-2">
+    <div
+      className={cn(
+        'md:grid md:grid-cols-2',
+        stackOnMobile
+          ? 'grid'
+          : 'scrollbar-none flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain',
+      )}
+    >
       {banners.map((banner) => {
         const href = `/collection/${banner.collectionSlug}`
         return (
           <div
             key={banner.collectionSlug}
-            className="group/banner relative flex aspect-square items-end justify-center overflow-hidden p-[30px] text-center text-white lg:p-[50px]"
+            className="group/banner relative flex aspect-square w-full shrink-0 snap-start items-end justify-center overflow-hidden p-[30px] text-center text-white lg:p-[50px]"
           >
             <Image
               alt={banner.image.alt}

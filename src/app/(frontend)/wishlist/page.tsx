@@ -3,8 +3,13 @@ import type { Metadata } from 'next'
 import { EmptyState } from '@/components/commerce/EmptyState'
 import { Container } from '@/components/ui/Container'
 import { PageTitle } from '@/components/ui/PageTitle'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = { title: 'Wishlist' }
+export const metadata: Metadata = pageMetadata({
+  title: 'Wishlist',
+  path: '/wishlist',
+  noIndex: true,
+})
 
 export default function WishlistPage() {
   return (

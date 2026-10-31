@@ -13,8 +13,8 @@ export function Footer() {
   return (
     <footer className="bg-footer text-white">
       <Container>
-        {/* Logo + brand statement (50 / 50) */}
-        <div className="mb-10 grid gap-6 pt-10 md:mb-[60px] md:pt-[60px] lg:mb-20 lg:grid-cols-2 lg:gap-[30px] lg:pt-20">
+        {/* Logo + brand statement (50 / 50 from 769px, as in the source) */}
+        <div className="mb-10 grid gap-6 pt-10 md:mb-[60px] md:pt-[60px] md:grid-cols-2 md:gap-[30px] lg:mb-20 lg:pt-20">
           <Link aria-label="Perfumes home" className="self-start" href="/">
             <Image
               alt=""
@@ -25,14 +25,14 @@ export function Footer() {
               width={276}
             />
           </Link>
-          <p className="max-w-[594px] text-base leading-[1.6] font-medium text-white lg:text-[30px] lg:leading-[1.2]">
+          <p className="max-w-[594px] text-base leading-[1.6] font-medium text-white md:text-xl md:leading-[1.2] lg:text-[30px]">
             {statement}
           </p>
         </div>
 
         {/* Newsletter (50%) + two link columns (25% each) */}
-        <div className="mb-10 grid grid-cols-2 gap-x-[30px] gap-y-10 md:mb-[60px] lg:mb-20 lg:grid-cols-[2fr_1fr_1fr]">
-          <div className="order-3 col-span-2 lg:order-none lg:col-span-1">
+        <div className="mb-10 grid grid-cols-2 gap-x-[30px] gap-y-10 md:mb-[60px] md:grid-cols-[2fr_1fr_1fr] lg:mb-20">
+          <div className="order-3 col-span-2 md:order-none md:col-span-1">
             <h2 className="mb-4 text-statement text-white">{newsletter.title}</h2>
             <p className="mb-6 max-w-[373px] text-white/80">{newsletter.text}</p>
             <NewsletterForm />

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 
 import { ArchivePage } from '@/components/archive/ArchivePage'
 import { getProductsByOlfactive, olfactiveFamilies } from '@/data'
+import { notFoundMetadata, pageMetadata } from '@/utilities/pageMetadata'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -20,7 +21,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const family = olfactiveFamilies.find((f) => f.slug === slug)
-  return family ? { title: `${family.name} fragrances`, description: describe(family.name) } : {}
+  return family
+    ? pageMetadata({
+        title: `${family.name} fragrances`,
+        description: describe(family.name),
+        path: `/olfactive-family/${slug}`,
+      })
+    : notFoundMetadata
 }
 
 export default async function OlfactiveFamilyPage({ params, searchParams }: Props) {

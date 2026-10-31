@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 
 import { SHOP_DESCRIPTION, ShopArchive } from './shopArchive'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Shop',
   description: SHOP_DESCRIPTION,
-}
+  path: '/shop',
+})
 
 type Props = { searchParams: Promise<{ category?: string }> }
 

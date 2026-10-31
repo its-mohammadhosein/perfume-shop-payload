@@ -21,6 +21,7 @@ import {
   getSizes,
   products,
 } from '@/data'
+import { notFoundMetadata, pageMetadata } from '@/utilities/pageMetadata'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -37,12 +38,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const product = getProduct(slug)
-  if (!product) return {}
-  return {
+  if (!product) return notFoundMetadata
+  return pageMetadata({
     title: product.name,
     description: product.shortDescription,
-    openGraph: { images: [{ url: product.images[0]!.src }] },
-  }
+    path: `/product/${slug}`,
+    image: product.images[0],
+  })
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -60,7 +62,7 @@ export default async function ProductPage({ params }: Props) {
   return (
     <Container className="pt-5 md:pt-[30px]">
       {/* Gallery | sticky summary */}
-      <div className="mb-10 grid items-start gap-[30px] md:mb-[60px] lg:mb-20 lg:grid-cols-2 lg:gap-[60px]">
+      <div className="mb-10 grid items-start gap-[30px] md:mb-[60px] md:grid-cols-2 lg:mb-20 lg:gap-[60px]">
         <ProductGallery images={product.images} name={product.name} video={product.video} />
 
         <div className="flex flex-col gap-[30px] lg:sticky lg:top-[100px]">
@@ -97,11 +99,7 @@ export default async function ProductPage({ params }: Props) {
 
       {related.length > 0 && (
         <section className="mb-section">
-          <Carousel
-            bordered
-            slideClassName="basis-1/2 md:basis-1/3 lg:basis-1/4"
-            title="From Collection"
-          >
+          <Carousel bordered slideClassName="basis-1/2 md:basis-1/4" title="From Collection">
             {related.map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}

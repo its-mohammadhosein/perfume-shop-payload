@@ -9,6 +9,7 @@ import { PageTitle } from '@/components/ui/PageTitle'
 import { StaticForm } from '@/components/ui/StaticForm'
 import { faq, getInfoPage, infoPages } from '@/data'
 import type { InfoPage } from '@/data/types'
+import { notFoundMetadata, pageMetadata } from '@/utilities/pageMetadata'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -18,7 +19,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getInfoPage((await params).slug)
-  return page ? { title: page.title, description: page.intro } : {}
+  return page
+    ? pageMetadata({ title: page.title, description: page.intro, path: `/${page.slug}` })
+    : notFoundMetadata
 }
 
 function Sections({ page }: { page: InfoPage }) {

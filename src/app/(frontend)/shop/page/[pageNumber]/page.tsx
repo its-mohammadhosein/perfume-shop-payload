@@ -3,7 +3,9 @@ import { notFound, redirect } from 'next/navigation'
 
 import { paginate, products } from '@/data'
 
-import { ShopArchive } from '../../shopArchive'
+import { pageMetadata } from '@/utilities/pageMetadata'
+
+import { SHOP_DESCRIPTION, ShopArchive } from '../../shopArchive'
 
 type Props = {
   params: Promise<{ pageNumber: string }>
@@ -18,7 +20,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { pageNumber } = await params
   const { totalPages } = paginate(products, 1)
-  return { title: `Shop - Page ${pageNumber} of ${totalPages}` }
+  return pageMetadata({
+    title: `Shop - Page ${pageNumber} of ${totalPages}`,
+    description: SHOP_DESCRIPTION,
+    path: `/shop/page/${pageNumber}`,
+  })
 }
 
 export default async function ShopPaged({ params, searchParams }: Props) {

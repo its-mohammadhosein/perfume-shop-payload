@@ -3,8 +3,13 @@ import type { Metadata } from 'next'
 import { EmptyState } from '@/components/commerce/EmptyState'
 import { Container } from '@/components/ui/Container'
 import { PageTitle } from '@/components/ui/PageTitle'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = { title: 'Compare' }
+export const metadata: Metadata = pageMetadata({
+  title: 'Compare',
+  path: '/compare',
+  noIndex: true,
+})
 
 // Not mirrored in the html base; wording follows WoodMart's compare empty state
 export default function ComparePage() {

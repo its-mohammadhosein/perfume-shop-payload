@@ -46,9 +46,13 @@ export function InstagramStrip({
         </a>
       </div>
 
-      <ul className="grid grid-cols-3 gap-2.5 md:gap-5 lg:grid-cols-6">
+      {/* Source: a carousel showing 2 / 3 tiles below 1025px, all six in a row on desktop */}
+      <ul className="scrollbar-none flex snap-x snap-mandatory gap-2.5 overflow-x-auto overscroll-x-contain md:gap-5 lg:grid lg:grid-cols-6 lg:overflow-visible">
         {tiles.map((tile, i) => (
-          <li key={i}>
+          <li
+            key={i}
+            className="shrink-0 basis-[calc((100%-10px)/2)] snap-start md:basis-[calc((100%-40px)/3)] lg:basis-auto"
+          >
             <a
               aria-label={`Instagram post ${i + 1}`}
               className="group/tile relative block aspect-square overflow-hidden"

@@ -25,7 +25,7 @@ const actionClass =
  */
 export function ProductCard({
   product,
-  sizes = '(min-width: 1025px) 25vw, (min-width: 769px) 33vw, 50vw',
+  sizes = '(min-width: 769px) 25vw, 50vw',
   priority,
   className,
 }: ProductCardProps) {

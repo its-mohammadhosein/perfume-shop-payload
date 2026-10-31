@@ -6,8 +6,13 @@ import { Container } from '@/components/ui/Container'
 import { Field } from '@/components/ui/Field'
 import { PageTitle } from '@/components/ui/PageTitle'
 import { StaticForm } from '@/components/ui/StaticForm'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = { title: 'My account' }
+export const metadata: Metadata = pageMetadata({
+  title: 'My account',
+  path: '/my-account',
+  noIndex: true,
+})
 
 const formTitle = 'mb-5 text-[22px] leading-[1.4] uppercase'
 

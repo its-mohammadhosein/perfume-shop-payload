@@ -4,11 +4,14 @@ import { PostCard } from '@/components/blog/PostCard'
 import { Container } from '@/components/ui/Container'
 import { PageTitle } from '@/components/ui/PageTitle'
 import { posts } from '@/data'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Journal',
   description: 'Stories, guides and inspiration from the world of fragrance.',
-}
+  path: '/journal',
+  image: posts[0]!.image,
+})
 
 export default function JournalPage() {
   return (

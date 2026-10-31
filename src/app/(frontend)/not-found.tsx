@@ -1,5 +1,8 @@
 import { EmptyState } from '@/components/commerce/EmptyState'
 import { Container } from '@/components/ui/Container'
+import { notFoundMetadata } from '@/utilities/pageMetadata'
+
+export const metadata = notFoundMetadata
 
 export default function NotFound() {
   return (

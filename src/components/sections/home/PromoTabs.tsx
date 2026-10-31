@@ -16,11 +16,22 @@ export function PromoTabs({ title, tabs }: PromoTabsProps) {
   const id = useId()
   const [active, setActive] = useState(0)
 
+  // WAI-ARIA tabs: arrows / Home / End move between tabs; only the active tab is in the Tab order
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    const last = tabs.length - 1
+    const next = { ArrowRight: active + 1, ArrowLeft: active - 1, Home: 0, End: last }[e.key]
+    if (next === undefined) return
+    e.preventDefault()
+    const index = next > last ? 0 : next < 0 ? last : next
+    setActive(index)
+    document.getElementById(`${id}-tab-${index}`)?.focus()
+  }
+
   return (
     <div>
       <div className="mb-5 flex flex-wrap items-center justify-between gap-x-5 gap-y-3 md:mb-[25px]">
         <Heading size="section">{title}</Heading>
-        <div aria-label={title} className="flex gap-[30px]" role="tablist">
+        <div aria-label={title} className="flex gap-[30px]" onKeyDown={onKeyDown} role="tablist">
           {tabs.map((tab, i) => (
             <button
               key={tab.label}
@@ -35,6 +46,7 @@ export function PromoTabs({ title, tabs }: PromoTabsProps) {
               id={`${id}-tab-${i}`}
               onClick={() => setActive(i)}
               role="tab"
+              tabIndex={i === active ? 0 : -1}
               type="button"
             >
               {tab.label}

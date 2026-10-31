@@ -23,6 +23,9 @@ import {
   promoSlugs,
 } from '@/data'
 import type { Product } from '@/data/types'
+import { pageMetadata } from '@/utilities/pageMetadata'
+
+export const metadata = pageMetadata({ path: '/' })
 
 function ProductCarousel({ products, perView }: { products: Product[]; perView: 3 | 4 }) {
   return (
@@ -46,6 +49,8 @@ export default function HomePage() {
 
   return (
     <>
+      {/* The design has no visible page heading (the source has none either) */}
+      <h1 className="sr-only">WoodMart Fragrances: luxury perfumes for her and for him</h1>
       <HeroSlider slides={heroSlides} />
 
       <Container>

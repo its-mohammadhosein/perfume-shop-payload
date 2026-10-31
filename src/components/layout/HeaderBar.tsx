@@ -67,6 +67,7 @@ export function HeaderBar({ overlap, nav, mobileNav, logos, searchItems }: Heade
   const [panel, setPanel] = useState<Panel>(null)
   const [megaOpen, setMegaOpen] = useState(false)
   const megaTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
+  const megaToggle = useRef<HTMLButtonElement>(null)
 
   const closePanel = useCallback(() => setPanel(null), [])
   const toggle = (p: Panel) => setPanel((current) => (current === p ? null : p))
@@ -124,26 +125,53 @@ export function HeaderBar({ overlap, nav, mobileNav, logos, searchItems }: Heade
                       onBlur={(e) => {
                         if (!e.currentTarget.contains(e.relatedTarget)) setMegaOpen(false)
                       }}
-                      onFocus={() => setMegaOpen(true)}
+                      onKeyDown={(e) => {
+                        if (e.key !== 'Escape' || !megaOpen) return
+                        setMegaOpen(false)
+                        megaToggle.current?.focus()
+                      }}
                       onMouseEnter={openMega}
                       onMouseLeave={closeMega}
                     >
-                      <NavLink active={megaOpen} hasDropdown href={item.href} label={item.label} />
-                      {/* Dims the page while the mega menu is open */}
+                      {/* Keyboard: Tab passes the closed menu; the toggle (shown on focus) opens it */}
+                      <div className="relative" onMouseEnter={openMega}>
+                        <NavLink
+                          active={megaOpen}
+                          hasDropdown
+                          href={item.href}
+                          label={item.label}
+                        />
+                        <button
+                          ref={megaToggle}
+                          aria-controls="mega-menu"
+                          aria-expanded={megaOpen}
+                          className="sr-only cursor-pointer focus-visible:not-sr-only focus-visible:absolute focus-visible:bottom-2 focus-visible:left-1/2 focus-visible:-translate-x-1/2 focus-visible:bg-white focus-visible:px-2 focus-visible:text-xs focus-visible:whitespace-nowrap focus-visible:text-title"
+                          onClick={() => setMegaOpen((open) => !open)}
+                          type="button"
+                        >
+                          {item.label} menu
+                        </button>
+                      </div>
+                      {/* Dims the page while the mega menu is open. It sits inside the <li>, so the
+                          pointer reaching it is the "left the menu" signal (no mouseleave fires). */}
                       <div
                         aria-hidden="true"
                         className={cn(
                           'fixed inset-0 -z-10 bg-black/40 transition-opacity duration-250',
                           megaOpen ? 'opacity-100' : 'pointer-events-none opacity-0',
                         )}
+                        onClick={() => setMegaOpen(false)}
+                        onMouseEnter={closeMega}
                       />
                       <div
+                        onMouseEnter={openMega}
                         className={cn(
                           'absolute top-[calc(100%-10px)] left-1/2 w-[min(1320px,calc(100vw-30px))] -translate-x-1/2 bg-white text-title transition-[opacity,translate] duration-250',
                           megaOpen
                             ? 'translate-y-0 opacity-100'
                             : 'pointer-events-none translate-y-[15px] opacity-0',
                         )}
+                        id="mega-menu"
                         inert={!megaOpen}
                       >
                         <MegaMenu menu={item.megaMenu} onNavigate={() => setMegaOpen(false)} />

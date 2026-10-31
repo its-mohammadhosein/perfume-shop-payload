@@ -1,9 +1,5 @@
 @import 'tailwindcss';
 
-@config '../../../tailwind.config.mjs';
-
-@plugin "@tailwindcss/typography";
-
 /* Header over a dark hero (home, before it turns sticky). Toggled by animations/stickyHeader.ts */
 @custom-variant header-light (&:where([data-header-tone='light'], [data-header-tone='light'] *));
 

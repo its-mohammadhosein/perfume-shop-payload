@@ -23,4 +23,8 @@ Plain-JS animation modules. They will be rewritten with **GSAP** later, so compo
 | `scrollTop.ts`    | Scroll-to-top button          | Shows after 400px; smooth scroll to top                                                                      | ScrollToPlugin                                                           |
 | `accordion.ts`    | About FAQ (`ui/Accordion`)    | Height animation on open / close (0.3s), opening one item closes the others, reduced motion skips it         | Height tween to `auto`; keep `hidden` as the closed state                |
 
-**CSS-only (no module):** off-canvas slide and overlay fade (`OffCanvas`), mega menu fade and rise (`HeaderBar`), mobile drill-down slide (`MobileMenu`), featured-card zoom (`MegaMenu`), product card icon fade (`ProductCard`), post image zoom (`PostCard`), collection banner rise and button reveal (`CollectionBanners`), tab panel fade (`PromoTabs`), hero slide text rise (`HeroSlider`).
+**CSS-only (no module):** off-canvas slide and overlay fade (`OffCanvas`), mega menu fade and rise (`HeaderBar`), mobile drill-down slide (`MobileMenu`), featured-card zoom (`MegaMenu`), product card icon fade (`ProductCard`), post image zoom (`PostCard`), collection banner rise and button reveal (`CollectionBanners`), tab panel fade (`PromoTabs`), hero slide text rise (`HeroSlider`), product lightbox fade (`ProductGallery`), related-posts side arrows sliding in on hover (`Carousel` `arrowPosition="sides"`), accordion plus → minus (`Accordion`).
+
+**Scroll-snap only (no module, no arrows):** collection banners and Instagram tiles on mobile (swipe rows below 769px / 1025px).
+
+**GSAP status:** not converted yet. Every module keeps the `AnimationInit` signature, so each can be rewritten in place without touching components.

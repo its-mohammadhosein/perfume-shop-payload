@@ -4,8 +4,9 @@ import { CheckoutSteps } from '@/components/commerce/CheckoutSteps'
 import { EmptyState } from '@/components/commerce/EmptyState'
 import { Container } from '@/components/ui/Container'
 import { PageTitle } from '@/components/ui/PageTitle'
+import { pageMetadata } from '@/utilities/pageMetadata'
 
-export const metadata: Metadata = { title: 'Cart' }
+export const metadata: Metadata = pageMetadata({ title: 'Cart', path: '/cart', noIndex: true })
 
 // The cart is always empty until commerce logic exists
 export default function CartPage() {

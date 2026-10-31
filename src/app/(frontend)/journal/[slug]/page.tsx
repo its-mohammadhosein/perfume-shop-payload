@@ -16,6 +16,7 @@ import { Heading } from '@/components/ui/Heading'
 import { WdIcon } from '@/components/ui/Icon'
 import { formatPostDate, getAdjacentPosts, getPost, getRelatedPosts, posts } from '@/data'
 import { getServerSideURL } from '@/utilities/getURL'
+import { notFoundMetadata, pageMetadata } from '@/utilities/pageMetadata'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -26,12 +27,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getPost(slug)
-  if (!post) return {}
-  return {
+  if (!post) return notFoundMetadata
+  return pageMetadata({
     title: post.title,
     description: post.excerpt,
-    openGraph: { type: 'article', images: [{ url: post.image.src }] },
-  }
+    path: `/journal/${slug}`,
+    image: post.image,
+    type: 'article',
+  })
 }
 
 export default async function PostPage({ params }: Props) {

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 
 import { ICON_STROKE, X } from '@/components/ui/Icon'
+import { useFocusTrap } from '@/hooks/useFocusTrap'
 import { cn } from '@/utilities/ui'
 
 type OffCanvasProps = {
@@ -28,6 +29,7 @@ export function OffCanvas({
   children,
 }: OffCanvasProps) {
   const panelRef = useRef<HTMLDivElement>(null)
+  useFocusTrap(panelRef, open)
 
   useEffect(() => {
     if (!open) return

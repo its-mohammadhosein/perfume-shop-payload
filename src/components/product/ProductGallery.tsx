@@ -1,10 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 import { ChevronLeft, ChevronRight, ICON_STROKE, X } from '@/components/ui/Icon'
 import type { FileAsset, ImageAsset } from '@/data/types'
+import { useFocusTrap } from '@/hooks/useFocusTrap'
 import { cn } from '@/utilities/ui'
 
 type ProductGalleryProps = {
@@ -90,6 +91,19 @@ function Lightbox({
     [index, images.length, onChange],
   )
 
+  const ref = useRef<HTMLDivElement>(null)
+  useFocusTrap(ref, true)
+
+  const closeRef = useRef<HTMLButtonElement>(null)
+
+  // Save the opener, focus Close, and give focus back on close
+  // (runs once; the effect below re-runs per image)
+  useEffect(() => {
+    const previous = document.activeElement as HTMLElement | null
+    closeRef.current?.focus()
+    return () => previous?.focus()
+  }, [])
+
   useEffect(() => {
     const root = document.documentElement
     const overflow = root.style.overflow
@@ -112,6 +126,7 @@ function Lightbox({
 
   return (
     <div
+      ref={ref}
       aria-label="Image viewer"
       aria-modal="true"
       className="fixed inset-0 z-[60] flex animate-[fade-in_0.25s_ease] items-center justify-center bg-black/90"
@@ -119,8 +134,8 @@ function Lightbox({
       role="dialog"
     >
       <button
+        ref={closeRef}
         aria-label="Close"
-        autoFocus
         className="absolute top-4 right-4 z-10 cursor-pointer p-2 text-white/80 hover:text-white"
         onClick={onClose}
         type="button"
