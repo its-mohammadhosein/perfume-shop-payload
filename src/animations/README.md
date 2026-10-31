@@ -13,10 +13,13 @@ Plain-JS animation modules. They will be rewritten with **GSAP** later, so compo
 
 ## Inventory
 
-| Module            | Used by                | Behaviour                                                                                  | GSAP notes                                                |
-| ----------------- | ---------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
-| `marquee.ts`      | Home and About marquee | Infinite horizontal loop, pauses off screen                                                | One infinite `xPercent` tween                             |
-| `stickyHeader.ts` | Header (every page)    | Fixed after scrolling, hides on scroll down, slides in on scroll up; switches overlap tone | ScrollTrigger `onUpdate` with direction; tween `yPercent` |
-| `scrollTop.ts`    | Scroll-to-top button   | Shows after 400px; smooth scroll to top                                                    | ScrollToPlugin                                            |
+| Module            | Used by                       | Behaviour                                                                                                    | GSAP notes                                                               |
+| ----------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `marquee.ts`      | Home and About marquee        | Infinite horizontal loop, pauses off screen                                                                  | One infinite `xPercent` tween                                            |
+| `stickyHeader.ts` | Header (every page)           | Fixed after scrolling, hides on scroll down, slides in on scroll up; switches overlap tone                   | ScrollTrigger `onUpdate` with direction; tween `yPercent`                |
+| `heroSlider.ts`   | Home hero                     | Crossfade, 5s autoplay (paused on hover, off for reduced motion), numbered dots, side arrows                 | Timeline per slide; stagger bottle, title, button                        |
+| `carousel.ts`     | All carousels (`ui/Carousel`) | Arrow buttons scroll one slide, disable at the ends; mouse drag with snap on release; touch is native scroll | Draggable + inertia, or Observer; keep scroll-snap as the no-JS fallback |
+| `cardGallery.ts`  | Product cards (desktop)       | Pointer position over the image picks which gallery image shows                                              | Crossfade tween between images                                           |
+| `scrollTop.ts`    | Scroll-to-top button          | Shows after 400px; smooth scroll to top                                                                      | ScrollToPlugin                                                           |
 
-**CSS-only (no module):** off-canvas slide and overlay fade (`OffCanvas`), mega menu fade and rise (`HeaderBar`), mobile drill-down slide (`MobileMenu`), featured-card zoom (`MegaMenu`).
+**CSS-only (no module):** off-canvas slide and overlay fade (`OffCanvas`), mega menu fade and rise (`HeaderBar`), mobile drill-down slide (`MobileMenu`), featured-card zoom (`MegaMenu`), product card icon fade (`ProductCard`), post image zoom (`PostCard`), collection banner rise and button reveal (`CollectionBanners`), tab panel fade (`PromoTabs`), hero slide text rise (`HeroSlider`).

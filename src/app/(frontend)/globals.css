@@ -33,6 +33,7 @@
   --color-line: rgb(0 0 0 / 10%);
   --color-line-focus: rgb(0 0 0 / 15%);
   --color-line-soft: rgb(0 0 0 / 11%);
+  --color-line-card: rgb(0 0 0 / 10.5%);
   --color-success: #459647;
   --color-warning: #e0b252;
 
@@ -153,6 +154,22 @@
   }
   @variant lg {
     margin-bottom: 80px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 

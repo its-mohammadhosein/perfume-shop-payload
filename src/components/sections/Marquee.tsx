@@ -39,8 +39,8 @@ export function Marquee({ items, duration = 45, className }: MarqueeProps) {
           <div key={half} className="flex shrink-0 items-center">
             {copy.map((item, i) => (
               <span key={i} className="flex items-center">
-                <span className="px-[0.35em] whitespace-nowrap">{item}</span>
-                <Star className="size-[0.55em] shrink-0 text-footer" />
+                <span className="whitespace-nowrap">{item}</span>
+                <Star className="mx-[0.7em] size-[0.7em] shrink-0 text-footer" />
               </span>
             ))}
           </div>
