@@ -308,7 +308,9 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 
 ---
 
-## Phase 8 — About (`/about-us`)
+## Phase 8 — About (`/about-us`) ✅
+
+> **As built:** the page sits in the container with the source's 40px top and bottom padding; the marquee stays inside the container as in the source (on Home it is full width). Our Story is text | image at ≥1025px; below that the image comes first and both are full width. `ui/Accordion` + `animations/accordion.ts`: all items start closed, opening one closes the others, 0.3s height animation (skipped for reduced motion), light grey plus that turns into a minus. Questions are 20px at every width, as in the source CSS.
 
 | Step | Part | Key specs |
 | ---- | ---- | --------- |
@@ -365,3 +367,4 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 5.1–5.2 | `/shop`, `/shop/page/[2-6]`, `/collection/[slug]` (6), `/olfactive-family/[slug]` (9). `ArchivePage`, `FilterSidebar` (Category, Price (static), Collection, Olfactive family, Stock status), `ShopFilters` off-canvas. Route statuses checked (page 7 and unknown slugs return 404). One screenshot check, no console errors. |
 | 2026-10-31 | 6.1–6.7 | `/product/[slug]` for all 72 products (static params, metadata, 404 for unknown slugs). `ProductGallery` (+ lightbox), `SizeSwitcher`, `AddToCart` (UI only), `ProductAttributes`, `CollectionVideo`, `ProductNotes`. Data: `Product.video`, `collectionVideoUrl`. Screenshot check at 1440px and 390px: lightbox opens and closes with Esc, no console errors. |
 | 2026-10-31 | 7.1–7.3 | `/journal` (6 cards, 3 columns) and `/journal/[slug]` (6 static params, 404 for unknown slugs). `PostContent`, `AuthorBio`, `PostTags`, `ShareButtons`, `PostNav`, `CommentForm` (static). Extractor and data updated for two-column rows. Screenshot check at 1440px and 390px against the html base: page heights within 26px, no console errors, no horizontal overflow; related-posts arrows checked by hover and click. |
+| 2026-10-31 | 8.1–8.5 | `/about-us`: intro, marquee, Our Story + FAQ accordion, Why Choose WoodMart cards (1 / 2 / 4 per row), Instagram strip. Screenshot check at 1440px, 900px and 390px against the html base: page height within 46px, no console errors, no horizontal overflow; FAQ open / close checked by clicking. |
