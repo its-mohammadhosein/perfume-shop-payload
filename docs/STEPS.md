@@ -248,7 +248,9 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 
 ---
 
-## Phase 5 — Archives
+## Phase 5 — Archives ✅
+
+> **As built:** one `components/archive/ArchivePage` serves all archive routes. The filter panel opens from the **right**, as in the source, and its options and counts are computed from the products on that page, which reproduces the source's Opus Essence counts exactly. `/shop?category=…` filters by category, because the mega menu links there. Olfactive-family pages paginate with `?page=`. `/shop/page/1` redirects to `/shop`. The pagination current-page style is confirmed from the source (`color #fff; background primary`).
 
 ### 5.1 ShopLayout (shared)
 - Grey band (`#F1F1F1`) header with the page title (`text-page`), description and a "Filters" toggle
@@ -356,3 +358,4 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 2.1–2.8 | Header (overlap on `/`, solid elsewhere; boxed 2px border; logo 240/150px), mega menu, search dropdown, side cart, mobile drill-down menu, sticky header (hide on scroll down, show on scroll up, verified at all four states), footer (50/50 statement row, inline newsletter, brand icons, payments), scroll-to-top. Compared with the html base via Playwright screenshots at 1440px and 390px. Fixed along the way: `next.config.ts` `images.localPatterns` now allows `/images/**`; `cn()` now knows the custom `text-*` sizes (tailwind-merge was dropping `text-hero` next to `text-white`). |
 | 2026-10-31 | 3.1–3.5 | `ProductCard` (+ `CardGallery` and `animations/cardGallery.ts`), `ProductGrid`, `ui/Carousel` (+ `animations/carousel.ts`), `ui/Pagination`, `blog/PostCard`, `scrollbar-none` utility. Verified with screenshots: carousel next scrolls one slide (470px at 1440px), hover cycles images, no console errors; desktop and mobile match the html base. |
 | 2026-10-31 | 4.1–4.10 | Home page: hero slider (`animations/heroSlider.ts`, 5s autoplay as in the source), New In, olfactory family buttons, marquee (spacing matched to the source), featured fragrances, promotional tabs, collection banners, journal carousel, Instagram strip. Built from the source block CSS; one screenshot check at 1440px and 390px with no console errors. |
+| 2026-10-31 | 5.1–5.2 | `/shop`, `/shop/page/[2-6]`, `/collection/[slug]` (6), `/olfactive-family/[slug]` (9). `ArchivePage`, `FilterSidebar` (Category, Price (static), Collection, Olfactive family, Stock status), `ShopFilters` off-canvas. Route statuses checked (page 7 and unknown slugs return 404). One screenshot check, no console errors. |
