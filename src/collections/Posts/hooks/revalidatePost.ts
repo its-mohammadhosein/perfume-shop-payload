@@ -1,8 +1,16 @@
 import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from 'payload'
 
-import { revalidatePath, revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 
 import type { Post } from '../../../payload-types'
+
+// Posts are shown at /journal/<slug>, listed on /journal and in the Home "Journal Articles" carousel
+const revalidateJournal = (slug: string | null | undefined) => {
+  revalidatePath(`/journal/${slug}`)
+  revalidatePath('/journal')
+  revalidatePath('/')
+  revalidatePath('/sitemap.xml')
+}
 
 export const revalidatePost: CollectionAfterChangeHook<Post> = ({
   doc,
@@ -11,22 +19,16 @@ export const revalidatePost: CollectionAfterChangeHook<Post> = ({
 }) => {
   if (!context.disableRevalidate) {
     if (doc._status === 'published') {
-      const path = `/posts/${doc.slug}`
+      payload.logger.info(`Revalidating post at path: /journal/${doc.slug}`)
 
-      payload.logger.info(`Revalidating post at path: ${path}`)
-
-      revalidatePath(path)
-      revalidateTag('posts-sitemap', 'max')
+      revalidateJournal(doc.slug)
     }
 
     // If the post was previously published, we need to revalidate the old path
     if (previousDoc._status === 'published' && doc._status !== 'published') {
-      const oldPath = `/posts/${previousDoc.slug}`
+      payload.logger.info(`Revalidating old post at path: /journal/${previousDoc.slug}`)
 
-      payload.logger.info(`Revalidating old post at path: ${oldPath}`)
-
-      revalidatePath(oldPath)
-      revalidateTag('posts-sitemap', 'max')
+      revalidateJournal(previousDoc.slug)
     }
   }
   return doc
@@ -34,10 +36,7 @@ export const revalidatePost: CollectionAfterChangeHook<Post> = ({
 
 export const revalidateDelete: CollectionAfterDeleteHook<Post> = ({ doc, req: { context } }) => {
   if (!context.disableRevalidate) {
-    const path = `/posts/${doc?.slug}`
-
-    revalidatePath(path)
-    revalidateTag('posts-sitemap', 'max')
+    revalidateJournal(doc?.slug)
   }
 
   return doc

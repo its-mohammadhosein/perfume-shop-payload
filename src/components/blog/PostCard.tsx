@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { formatPostDate } from '@/data/posts'
-import type { Post } from '@/data/types'
+import { formatPostDate } from '@/journal/format'
+import type { JournalPost } from '@/journal/types'
 import { cn } from '@/utilities/ui'
 
 type PostCardProps = {
-  post: Post
+  post: JournalPost
   sizes?: string
   /** `square`: 588×598 crop (journal grid, home); `wide`: 1024×633 (related posts) */
   aspect?: 'square' | 'wide'
@@ -15,7 +15,7 @@ type PostCardProps = {
   className?: string
 }
 
-/** Journal card: near-square image, "Category / date" meta, title. */
+/** Journal card: image (grey block when a post has none), "Category / date" meta, title. */
 export function PostCard({
   post,
   sizes = '(min-width: 769px) 33vw, 100vw',
@@ -35,18 +35,24 @@ export function PostCard({
         href={href}
         tabIndex={-1}
       >
-        <Image
-          alt={post.image.alt}
-          className="object-cover transition-transform duration-500 group-hover/post:scale-105"
-          fill
-          priority={priority}
-          sizes={sizes}
-          src={post.image.src}
-        />
+        {post.image && (
+          <Image
+            alt={post.image.alt}
+            className="object-cover transition-transform duration-500 group-hover/post:scale-105"
+            fill
+            priority={priority}
+            sizes={sizes}
+            src={post.image.src}
+          />
+        )}
       </Link>
       <p className="mb-1.5 flex items-center gap-1.5 text-base text-gray-400">
-        <span>{post.category}</span>
-        <span aria-hidden="true">/</span>
+        {post.category && (
+          <>
+            <span>{post.category}</span>
+            <span aria-hidden="true">/</span>
+          </>
+        )}
         <time dateTime={post.date}>{formatPostDate(post.date)}</time>
       </p>
       <h3 className="text-xl leading-[1.3] font-medium">

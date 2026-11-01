@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 import { ChevronLeft, ChevronRight, ICON_STROKE, WdIcon } from '@/components/ui/Icon'
-import type { Post } from '@/data/types'
+import type { JournalPost } from '@/journal/types'
 import { cn } from '@/utilities/ui'
 
 const circle =
   'absolute top-[calc(50%-20px)] flex size-10 items-center justify-center rounded-full border border-gray-300 text-gray-800'
 
-function NavLink({ post, dir }: { post?: Post; dir: 'newer' | 'older' }) {
+function NavLink({ post, dir }: { post?: JournalPost; dir: 'newer' | 'older' }) {
   const older = dir === 'older'
   const Chevron = older ? ChevronRight : ChevronLeft
   return (
@@ -36,7 +36,7 @@ function NavLink({ post, dir }: { post?: Post; dir: 'newer' | 'older' }) {
 }
 
 /** Newer | back to list | Older, between 2px dark rules. */
-export function PostNav({ newer, older }: { newer?: Post; older?: Post }) {
+export function PostNav({ newer, older }: { newer?: JournalPost; older?: JournalPost }) {
   return (
     <nav aria-label="Post navigation" className="flex items-center border-y-2 border-primary py-5">
       <NavLink dir="newer" post={newer} />

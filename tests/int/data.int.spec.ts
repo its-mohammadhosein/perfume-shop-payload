@@ -4,15 +4,7 @@ import path from 'node:path'
 
 import { describe, expect, it } from 'vitest'
 
-import {
-  collections,
-  getSizes,
-  heroSlides,
-  olfactiveFamilies,
-  paginate,
-  posts,
-  products,
-} from '@/data'
+import { collections, getSizes, heroSlides, olfactiveFamilies, paginate, products } from '@/data'
 import registry from '@/data/generated/images.json'
 
 const publicDir = path.resolve(__dirname, '../../public')
@@ -63,21 +55,6 @@ describe('static data', () => {
     expect(abyss.dummy).toBeUndefined()
     expect(abyss.notes.top).toContain('Bergamot')
     expect(products.filter((p) => p.dummy)).toHaveLength(69)
-  })
-
-  it('has 6 posts, newest first, with the real body for Scent & Sensibility', () => {
-    expect(posts.map((p) => p.slug)).toEqual([
-      'scent-sensibility',
-      'notes-of-elegance',
-      'the-perfume-journal',
-      'beyond-the-bottle',
-      'aroma-diaries',
-      'essence-allure',
-    ])
-    expect(posts[0]!.dummy).toBeUndefined()
-    const flat = posts[0]!.blocks.flatMap((b) => (b.type === 'columns' ? b.columns.flat() : [b]))
-    expect(flat.filter((b) => b.type === 'heading')).toHaveLength(6)
-    expect(posts[0]!.blocks.filter((b) => b.type === 'columns')).toHaveLength(2)
   })
 
   it('points every image at a file in public/', () => {

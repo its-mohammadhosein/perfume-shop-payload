@@ -11,7 +11,7 @@ The working checklist for the migration described in [`MIGRATION.md`](MIGRATION.
 
 | Topic | Decision |
 | ----- | -------- |
-| Content | Static typed data in `src/data/`. **No new Payload collections.** Existing collections and globals stay untouched. |
+| Content | Static typed data in `src/data/`, **except journal posts, which come from Payload's `posts` collection** (2026-10-31). No new Payload collections. |
 | Missing content | Dummy data with the same structure and length as the real content, marked `dummy: true` or `// DUMMY`. |
 | Template frontend | Replaced. The Payload admin and backend config stay. |
 | Post URLs | `/journal/[slug]` |
@@ -374,3 +374,4 @@ Build each section in `components/sections/home/` from `src/data/home.ts`, and c
 | 2026-10-31 | 8.1–8.5 | `/about-us`: intro, marquee, Our Story + FAQ accordion, Why Choose WoodMart cards (1 / 2 / 4 per row), Instagram strip. Screenshot check at 1440px, 900px and 390px against the html base: page height within 46px, no console errors, no horizontal overflow; FAQ open / close checked by clicking. |
 | 2026-10-31 | 9.1–9.6 | `/cart`, `/wishlist`, `/compare` (empty states), `/checkout` (billing form + DUMMY order), `/my-account` (login / register), `/fragrances`, `/contact-us`, `/faq`, `/refund`, `/cookies`, `/terms`, `/privacy`, styled 404 with a catch-all route. Every internal link in the header, menus and footer returns 200; unknown URLs return a styled 404. Cart and wishlist compared with the html base at 1440px; all new pages checked at 390px with no horizontal overflow and no console errors. |
 | 2026-10-31 | 10.1–10.6 | Metadata on every route, sitemap / robots, accessibility fixes (mega menu keyboard, tabs, focus traps), tablet layout fixes from the responsive QA, dependency cleanup, route smoke test (115 tests), animation README. `tsc`, `lint` (0 errors) and `pnpm build` pass. Remaining page-height differences against the html base are under 8% at every checked width. GSAP conversion dropped afterwards: the modules stay plain JS. |
+| 2026-10-31 | Journal → Payload | `/journal`, `/journal/[slug]`, the Home carousel and the sitemap read published posts from the `posts` collection (`src/journal/`). Lexical content renders through `PostRichText` with the converted post styles (incl. media, banner and code blocks). Drafts show in admin preview / live preview (`@payloadcms/live-preview-react` re-added). Revalidation, preview paths and SEO URLs moved from `/posts` to `/journal`. Static post data removed. No schema change (`migrate:create` reports none). Not seeded: an empty journal shows an empty state and Home hides its carousel. |

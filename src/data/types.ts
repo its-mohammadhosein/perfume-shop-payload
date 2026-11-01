@@ -71,37 +71,10 @@ export type Product = Dummy & {
   video?: FileAsset
 }
 
-type PostFlowBlock =
-  | { type: 'heading'; text: string }
-  | { type: 'paragraph'; text: string }
-  | { type: 'image'; image: ImageAsset }
-
-/** Flow content, plus side-by-side rows (text | image) */
-export type PostBlock = PostFlowBlock | { type: 'columns'; columns: PostFlowBlock[][] }
-
-export type Author = Dummy & {
-  slug: string
-  name: string
-  bio: string
-  avatar: ImageAsset
-}
-
+/** Tag pill on a journal post (from Payload categories) */
 export type Tag = {
   slug: string
   name: string
-}
-
-export type Post = Dummy & {
-  slug: string
-  title: string
-  /** ISO date, e.g. "2025-10-28" */
-  date: string
-  category: string
-  image: ImageAsset
-  excerpt: string
-  author: Author
-  tags: Tag[]
-  blocks: PostBlock[]
 }
 
 export type NavLink = {

@@ -1,15 +1,9 @@
 import { expect, test } from '@playwright/test'
 
-import {
-  collections,
-  infoPages,
-  olfactiveFamilies,
-  paginate,
-  posts,
-  products,
-} from '../../src/data'
+import { collections, infoPages, olfactiveFamilies, paginate, products } from '../../src/data'
 
-// Every frontend route, built from the same data the pages use
+// Every static frontend route, built from the same data the pages use. Journal posts come from
+// Payload, so they're checked separately by following the links on /journal.
 const { totalPages } = paginate(products, 1)
 const routes = [
   '/',
@@ -20,7 +14,6 @@ const routes = [
   ...olfactiveFamilies.map((f) => `/olfactive-family/${f.slug}`),
   ...products.map((p) => `/product/${p.slug}`),
   '/journal',
-  ...posts.map((p) => `/journal/${p.slug}`),
   '/about-us',
   ...infoPages.map((p) => `/${p.slug}`),
   '/cart',
@@ -45,6 +38,24 @@ test.describe('Frontend smoke test', () => {
       expect(errors).toEqual([])
     })
   }
+
+  test('every published journal post renders (none is fine: the list shows an empty state)', async ({
+    page,
+  }) => {
+    await page.goto('/journal')
+    const hrefs = await page
+      .locator('main a[href^="/journal/"]')
+      .evaluateAll((links) => [...new Set(links.map((a) => a.getAttribute('href')!))])
+    if (hrefs.length === 0) {
+      await expect(page.getByText('No journal posts have been published yet.')).toBeVisible()
+    }
+    for (const href of hrefs) {
+      const response = await page.goto(href)
+      expect(response?.status(), href).toBe(200)
+      await expect(page.locator('h1')).toHaveCount(1)
+      await expect(page.locator('article')).toBeVisible()
+    }
+  })
 
   test('unknown URLs render the styled 404', async ({ page }) => {
     for (const route of ['/does-not-exist', '/shop/does-not-exist', '/product/does-not-exist']) {

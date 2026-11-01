@@ -19,10 +19,10 @@ import {
   instagram,
   marqueeWords,
   newInSlugs,
-  posts,
   promoSlugs,
 } from '@/data'
 import type { Product } from '@/data/types'
+import { getJournalPosts } from '@/journal/posts'
 import { pageMetadata } from '@/utilities/pageMetadata'
 
 export const metadata = pageMetadata({ path: '/' })
@@ -44,7 +44,12 @@ function ProductCarousel({ products, perView }: { products: Product[]; perView: 
   )
 }
 
-export default function HomePage() {
+// Picks up newly published posts (also refreshed by the revalidatePost hook)
+export const revalidate = 600
+
+export default async function HomePage() {
+  const posts = await getJournalPosts(5)
+
   const promo = getProductsBySlugs(promoSlugs)
 
   return (
@@ -101,17 +106,19 @@ export default function HomePage() {
           <CollectionBanners banners={collectionBanners} />
         </Section>
 
-        <Section>
-          <Carousel
-            gapClassName="gap-2.5 md:gap-5"
-            slideClassName="basis-full md:basis-[calc((100%-40px)/3)]"
-            title="Journal Articles"
-          >
-            {posts.slice(0, 5).map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </Carousel>
-        </Section>
+        {posts.length > 0 && (
+          <Section>
+            <Carousel
+              gapClassName="gap-2.5 md:gap-5"
+              slideClassName="basis-full md:basis-[calc((100%-40px)/3)]"
+              title="Journal Articles"
+            >
+              {posts.map((post) => (
+                <PostCard key={post.id} post={post} />
+              ))}
+            </Carousel>
+          </Section>
+        )}
 
         <InstagramStrip className="pb-[45px]" {...instagram} />
       </Container>

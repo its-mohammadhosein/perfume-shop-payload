@@ -232,87 +232,6 @@ function parseProductDetail(html) {
 /* Journal                                                                   */
 /* ------------------------------------------------------------------------ */
 
-function parsePostCards(html) {
-  const main = between(html, 'role="main"', 'wd-footer')
-  const seen = new Map()
-  for (const m of main.matchAll(/<article[\s\S]*?<\/article>/g)) {
-    const card = m[0]
-    const link = card.match(/\/(\d{4})\/(\d{2})\/(\d{2})\/([^/"]+)\//)
-    if (!link || seen.has(link[4])) continue
-    seen.set(link[4], {
-      slug: link[4],
-      title: text(card.match(/<h3[^>]*>([\s\S]*?)<\/h3>/)[1]),
-      date: `${link[1]}-${link[2]}-${link[3]}`,
-      category: 'Perfumes',
-      image: imageKey(card.match(/<img[^>]*src="([^"]+)"/)[1]),
-    })
-  }
-  return [...seen.values()]
-}
-
-/** Index just past the `</div>` that closes the `<div` starting at `start` */
-function closingDiv(html, start) {
-  const tag = /<div\b|<\/div>/g
-  tag.lastIndex = start
-  let depth = 0
-  for (let m; (m = tag.exec(html));) {
-    depth += m[0] === '</div>' ? -1 : 1
-    if (depth === 0) return tag.lastIndex
-  }
-  return html.length
-}
-
-function parseFlow(html) {
-  const blocks = []
-  for (const m of html.matchAll(
-    /<h2[^>]*>([\s\S]*?)<\/h2>|<p[^>]*>([\s\S]*?)<\/p>|<img[^>]*src="([^"]+)"[^>]*>/g,
-  )) {
-    if (m[1]) blocks.push({ type: 'heading', text: text(m[1]) })
-    else if (m[2] && text(m[2])) blocks.push({ type: 'paragraph', text: text(m[2]) })
-    else if (m[3]) {
-      const key = imageKey(m[3])
-      if (key) blocks.push({ type: 'image', image: key })
-    }
-  }
-  return blocks
-}
-
-function parsePostBody(html) {
-  const body = stripNoise(between(html, 'class="wd-single-post-content', '<h4'))
-  // Two-column rows (text | image) become a `columns` block; everything else is plain flow
-  const blocks = []
-  let pos = 0
-  for (const row of body.matchAll(/<div[^>]*class="wp-block-wd-row"[^>]*>/g)) {
-    if (row.index < pos) continue
-    blocks.push(...parseFlow(body.slice(pos, row.index)))
-    const end = closingDiv(body, row.index)
-    const inner = body.slice(row.index + row[0].length, end)
-    const columns = []
-    for (const col of inner.matchAll(/<div[^>]*class="wp-block-wd-column"[^>]*>/g)) {
-      columns.push(parseFlow(inner.slice(col.index, closingDiv(inner, col.index))))
-    }
-    blocks.push({ type: 'columns', columns })
-    pos = end
-  }
-  blocks.push(...parseFlow(body.slice(pos)))
-  const authorHtml = between(html, '<h4', 'View all posts')
-  return {
-    slug: 'scent-sensibility',
-    blocks,
-    tags: [...html.matchAll(/\/blog\/blog-tag\/([^/]+)\/"[^>]*>([\s\S]*?)<\/a>/g)].map((m) => ({
-      slug: m[1],
-      name: text(m[2]),
-    })),
-    author: {
-      name: text(authorHtml.match(/<h4[^>]*>([\s\S]*?)<\/h4>/)[1]).replace(/^About\s+/, ''),
-      bio: text(authorHtml.match(/<\/h4>([\s\S]*)/)[1]),
-      avatar: imageKey(html.match(/[^"]*uploads\/2018\/10\/avatar-home\.jpg/)[0]),
-    },
-  }
-}
-
-/* ------------------------------------------------------------------------ */
-
 async function main() {
   if (!fs.existsSync(SITE)) throw new Error(`html base not found at ${SITE}`)
 
@@ -327,8 +246,6 @@ async function main() {
   }
 
   const productDetail = parseProductDetail(read('product/abyss-bleu/index.html'))
-  const posts = parsePostCards(read('journal/index.html'))
-  const postBody = parsePostBody(read('2025/10/28/scent-sensibility/index.html'))
 
   // Every image referenced by the pages we rebuild
   const pages = [
@@ -357,8 +274,6 @@ async function main() {
   write('products.json', products)
   write('collection-members.json', collectionMembers)
   write('product-detail.json', productDetail)
-  write('posts.json', posts)
-  write('post-body.json', postBody)
   write('images.json', registry)
 
   console.log(
@@ -368,9 +283,6 @@ async function main() {
     `categories: ${JSON.stringify(products.reduce((a, p) => ({ ...a, [p.category]: (a[p.category] ?? 0) + 1 }), {}))}`,
   )
   console.log(`opus-essence members: ${collectionMembers['opus-essence'].length}`)
-  console.log(
-    `posts: ${posts.length}, post blocks: ${postBody.blocks.length}, tags: ${postBody.tags.length}`,
-  )
   console.log(
     `images: ${Object.keys(registry).length} copied (${(bytes / 1024 / 1024).toFixed(1)} MB)`,
   )
