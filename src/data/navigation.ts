@@ -1,71 +1,7 @@
 import { file, image } from './images'
-import { collections } from './taxonomies'
-import type { MegaMenuColumn, MobileNavItem, NavItem, NavLink, SocialLink } from './types'
+import type { NavLink, SocialLink } from './types'
 
-const collectionLink = (slug: string): NavLink => {
-  const c = collections.find((col) => col.slug === slug)!
-  return { label: c.name, href: `/collection/${c.slug}` }
-}
-
-const herCollections = collections
-  .filter((c) => c.gender === 'her')
-  .map((c) => collectionLink(c.slug))
-const himCollections = collections
-  .filter((c) => c.gender === 'him')
-  .map((c) => collectionLink(c.slug))
-
-// Category links point at archives instead of WooCommerce query filters
-const megaMenuColumns: MegaMenuColumn[] = [
-  {
-    title: { label: 'Collections for Her', href: '/shop?category=womens-fragrances' },
-    links: herCollections,
-  },
-  {
-    title: { label: 'Collections for Him', href: '/shop?category=mens-fragrances' },
-    links: himCollections,
-  },
-  {
-    title: { label: 'All Collections', href: '/shop' },
-    links: [...herCollections, ...himCollections],
-  },
-]
-
-const featured = collections.find((c) => c.slug === 'opus-essence')!
-
-export const mainNav: NavItem[] = [
-  { label: 'New', href: '/shop' },
-  {
-    label: 'Fragrances',
-    href: '/fragrances',
-    megaMenu: {
-      columns: megaMenuColumns,
-      featured: {
-        title: featured.name,
-        text: featured.summary,
-        href: `/collection/${featured.slug}`,
-        image: featured.image,
-      },
-    },
-  },
-  { label: 'Journal', href: '/journal' },
-  { label: 'About Us', href: '/about-us' },
-]
-
-export const mobileNav: MobileNavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'New', href: '/shop' },
-  {
-    label: 'Fragrances',
-    href: '/fragrances',
-    children: megaMenuColumns.map((col) => col.title),
-  },
-  { label: 'Journal', href: '/journal' },
-  { label: 'About us', href: '/about-us' },
-  { label: 'Contact us', href: '/contact-us' },
-  { label: 'Wishlist', href: '/wishlist', icon: 'wishlist' },
-  { label: 'Compare', href: '/compare', icon: 'compare' },
-  { label: 'Login / Register', href: '/my-account', icon: 'account' },
-]
+// The main and mobile menus come from the Header global (src/shop/map.ts); seeded by src/seed
 
 export const footerColumns: NavLink[][] = [
   [

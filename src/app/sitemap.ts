@@ -1,15 +1,16 @@
 import type { MetadataRoute } from 'next'
 
-import { collections, infoPages, olfactiveFamilies, paginate, products } from '@/data'
+import { infoPages, olfactiveFamilies, paginate, products } from '@/data'
 import { getJournalPosts } from '@/journal/posts'
+import { getFragranceCollections } from '@/shop/queries'
 import { getServerSideURL } from '@/utilities/getURL'
 
-// Refreshed when a post is published (revalidatePost hook)
+// Refreshed when a post is published or shop data changes (revalidatePost / revalidateSite hooks)
 export const revalidate = 600
 
 /** Every indexable page (cart, checkout, account, wishlist and compare are left out). */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getJournalPosts()
+  const [posts, collections] = await Promise.all([getJournalPosts(), getFragranceCollections()])
   const url = (path: string) => `${getServerSideURL()}${path}`
   const { totalPages } = paginate(products, 1)
 

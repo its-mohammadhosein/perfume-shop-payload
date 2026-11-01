@@ -71,6 +71,7 @@ export interface Config {
     posts: Post;
     media: Media;
     categories: Category;
+    'fragrance-collections': FragranceCollection;
     users: User;
     redirects: Redirect;
     forms: Form;
@@ -93,6 +94,7 @@ export interface Config {
     posts: PostsSelect<false> | PostsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    'fragrance-collections': FragranceCollectionsSelect<false> | FragranceCollectionsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
@@ -292,6 +294,8 @@ export interface Media {
     };
     [k: string]: unknown;
   } | null;
+  prefix?: string | null;
+  _objectKey?: string | null;
   folder?: (number | null) | FolderInterface;
   updatedAt: string;
   createdAt: string;
@@ -775,6 +779,36 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "fragrance-collections".
+ */
+export interface FragranceCollection {
+  id: number;
+  _order?: string | null;
+  name: string;
+  gender: 'her' | 'him';
+  /**
+   * Short text for the mega menu card.
+   */
+  summary: string;
+  /**
+   * Shown on the collection page and the Fragrances overview.
+   */
+  description: string;
+  image: number | Media;
+  /**
+   * Copy or image is not from the original design yet and should be replaced.
+   */
+  placeholder?: boolean | null;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -978,6 +1012,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'categories';
         value: number | Category;
+      } | null)
+    | ({
+        relationTo: 'fragrance-collections';
+        value: number | FragranceCollection;
       } | null)
     | ({
         relationTo: 'users';
@@ -1218,6 +1256,8 @@ export interface PostsSelect<T extends boolean = true> {
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
   caption?: T;
+  prefix?: T;
+  _objectKey?: T;
   folder?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1322,6 +1362,23 @@ export interface CategoriesSelect<T extends boolean = true> {
         label?: T;
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "fragrance-collections_select".
+ */
+export interface FragranceCollectionsSelect<T extends boolean = true> {
+  _order?: T;
+  name?: T;
+  gender?: T;
+  summary?: T;
+  description?: T;
+  image?: T;
+  placeholder?: T;
+  generateSlug?: T;
+  slug?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1630,22 +1687,54 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Header {
   id: number;
+  /**
+   * Main menu. The mobile menu shows the same items plus Home, Contact us, Wishlist, Compare and Login.
+   */
   navItems?:
     | {
-        link: {
-          type?: ('reference' | 'custom') | null;
-          newTab?: boolean | null;
-          reference?:
-            | ({
-                relationTo: 'pages';
-                value: number | Page;
-              } | null)
-            | ({
-                relationTo: 'posts';
-                value: number | Post;
-              } | null);
-          url?: string | null;
-          label: string;
+        label: string;
+        /**
+         * A site path like /shop, or a full URL.
+         */
+        url: string;
+        hasMegaMenu?: boolean | null;
+        megaMenu?: {
+          /**
+           * Column titles are also the sub-items of this entry in the mobile menu.
+           */
+          columns?:
+            | {
+                label: string;
+                /**
+                 * Where the column title links to.
+                 */
+                url: string;
+                /**
+                 * Automatic columns list the Fragrance Collections in their admin order.
+                 */
+                source: 'her' | 'him' | 'all' | 'custom';
+                links?:
+                  | {
+                      label: string;
+                      /**
+                       * A site path like /shop, or a full URL.
+                       */
+                      url: string;
+                      id?: string | null;
+                    }[]
+                  | null;
+                id?: string | null;
+              }[]
+            | null;
+          /**
+           * Shows the chosen collection’s image, name and summary, linking to it. Fill in the fields below only to override them.
+           */
+          featured?: {
+            collection?: (number | null) | FragranceCollection;
+            title?: string | null;
+            text?: string | null;
+            image?: (number | null) | Media;
+          };
         };
         id?: string | null;
       }[]
@@ -1690,14 +1779,35 @@ export interface HeaderSelect<T extends boolean = true> {
   navItems?:
     | T
     | {
-        link?:
+        label?: T;
+        url?: T;
+        hasMegaMenu?: T;
+        megaMenu?:
           | T
           | {
-              type?: T;
-              newTab?: T;
-              reference?: T;
-              url?: T;
-              label?: T;
+              columns?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                    source?: T;
+                    links?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              featured?:
+                | T
+                | {
+                    collection?: T;
+                    title?: T;
+                    text?: T;
+                    image?: T;
+                  };
             };
         id?: T;
       };

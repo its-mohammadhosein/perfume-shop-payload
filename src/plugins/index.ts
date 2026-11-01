@@ -3,6 +3,7 @@ import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import { searchPlugin } from '@payloadcms/plugin-search'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Plugin } from 'payload'
 import { revalidateRedirects } from '@/hooks/revalidateRedirects'
 import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
@@ -92,5 +93,16 @@ export const plugins: Plugin[] = [
         return [...defaultFields, ...searchFields]
       },
     },
+  }),
+  // Vercel's filesystem is read-only, so uploads go to Vercel Blob when BLOB_READ_WRITE_TOKEN is set.
+  // Without it (local dev) files stay in public/media.
+  vercelBlobStorage({
+    // Same Media columns with or without the token, so migrations match every environment
+    alwaysInsertFields: true,
+    // Browser uploads straight to Blob, avoiding Vercel's 4.5 MB request body limit
+    clientUploads: true,
+    collections: { media: true },
+    enabled: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
+    token: process.env.BLOB_READ_WRITE_TOKEN,
   }),
 ]

@@ -1,15 +1,9 @@
-import type { ImageAsset } from '@/data/types'
-import type { Media, Post } from '@/payload-types'
+import type { Post } from '@/payload-types'
+import { mediaImage } from '@/utilities/mediaImage'
 
 import type { JournalPost } from './types'
 
 // Pure mapping from Payload posts to the journal UI (no Payload or Next imports, so it's unit-testable)
-
-function toImage(media: Post['heroImage'], fallbackAlt: string): ImageAsset | undefined {
-  if (!media || typeof media !== 'object' || !media.url) return undefined
-  const m = media as Media
-  return { src: m.url!, width: m.width ?? 1200, height: m.height ?? 742, alt: m.alt || fallbackAlt }
-}
 
 type LexicalNode = { type?: string; text?: string; children?: LexicalNode[] }
 
@@ -32,7 +26,7 @@ export function toJournalPost(post: Post): JournalPost {
     title: post.title,
     date: (post.publishedAt ?? post.createdAt).slice(0, 10),
     category: categories[0]?.title,
-    image: toImage(post.heroImage ?? post.meta?.image, post.title),
+    image: mediaImage(post.heroImage ?? post.meta?.image, post.title),
     excerpt: post.meta?.description || firstParagraph(post.content),
     authorName: post.populatedAuthors?.find((a) => a.name)?.name ?? undefined,
     tags: categories.map((c) => ({ slug: c.slug, name: c.title })),

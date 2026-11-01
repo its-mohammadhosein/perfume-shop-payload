@@ -1,13 +1,15 @@
 import Link from 'next/link'
 
 import { formatPrice } from '@/components/ui/Price'
-import { categories, collections, olfactiveFamilies } from '@/data'
-import type { Product } from '@/data/types'
+import { categories, olfactiveFamilies } from '@/data'
+import type { Collection, Product } from '@/data/types'
 import { cn } from '@/utilities/ui'
 
 type FilterSidebarProps = {
   /** Products of the current archive; options and counts are derived from them */
   products: Product[]
+  /** Fragrance collections from Payload */
+  collections: Collection[]
   /** Hide the collection filter on a collection page */
   hideCollections?: boolean
   /** Active slugs, highlighted in the lists */
@@ -56,7 +58,12 @@ function OptionList({
  * Static filter widgets (Category, Price, Collection, Olfactive family, Stock status).
  * Links navigate to the matching archive page; there is no query filtering yet.
  */
-export function FilterSidebar({ products, hideCollections, active = {} }: FilterSidebarProps) {
+export function FilterSidebar({
+  products,
+  collections,
+  hideCollections,
+  active = {},
+}: FilterSidebarProps) {
   const count = (pred: (p: Product) => boolean) => products.filter(pred).length
   const prices = products.map((p) => p.price)
   const min = Math.min(...prices)

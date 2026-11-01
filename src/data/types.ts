@@ -90,7 +90,7 @@ export type MegaMenuColumn = {
 export type NavItem = NavLink & {
   megaMenu?: {
     columns: MegaMenuColumn[]
-    featured: {
+    featured?: {
       title: string
       text: string
       href: string

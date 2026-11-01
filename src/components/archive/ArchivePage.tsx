@@ -4,6 +4,7 @@ import { Heading } from '@/components/ui/Heading'
 import { Pagination } from '@/components/ui/Pagination'
 import { paginate } from '@/data'
 import type { Product } from '@/data/types'
+import { getFragranceCollections } from '@/shop/queries'
 
 import { FilterSidebar } from './FilterSidebar'
 import { ShopFilters } from './ShopFilters'
@@ -24,7 +25,7 @@ type ArchivePageProps = {
  * Shop / collection / olfactive-family archive: title + "Filters" toggle, description, then a
  * full-width grey band holding the bordered product grid and pagination (12 per page).
  */
-export function ArchivePage({
+export async function ArchivePage({
   title,
   description,
   products,
@@ -34,6 +35,7 @@ export function ArchivePage({
   hideCollectionFilter,
 }: ArchivePageProps) {
   const { items, totalPages } = paginate(products, page)
+  const collections = await getFragranceCollections()
 
   return (
     <>
@@ -45,6 +47,7 @@ export function ArchivePage({
           <ShopFilters>
             <FilterSidebar
               active={filters}
+              collections={collections}
               hideCollections={hideCollectionFilter}
               products={products}
             />

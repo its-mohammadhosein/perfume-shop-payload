@@ -13,7 +13,6 @@ import { Container } from '@/components/ui/Container'
 import { Heading } from '@/components/ui/Heading'
 import { Price } from '@/components/ui/Price'
 import {
-  collections,
   collectionVideoUrl,
   file,
   getProduct,
@@ -21,6 +20,7 @@ import {
   getSizes,
   products,
 } from '@/data'
+import { getFragranceCollection } from '@/shop/queries'
 import { notFoundMetadata, pageMetadata } from '@/utilities/pageMetadata'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -52,7 +52,7 @@ export default async function ProductPage({ params }: Props) {
   const product = getProduct(slug)
   if (!product) notFound()
 
-  const collection = collections.find((c) => c.slug === product.collection)
+  const collection = await getFragranceCollection(product.collection)
   // Other products of the collection, 100ml first, excluding this fragrance
   const related = getProductsByCollection(product.collection)
     .filter((p) => p.fragranceSlug !== product.fragranceSlug)
@@ -75,7 +75,7 @@ export default async function ProductPage({ params }: Props) {
           <SizeSwitcher current={product.slug} sizes={getSizes(product.fragranceSlug)} />
           <Price amount={product.price} className="text-2xl" regular={product.regularPrice} />
           <AddToCart productName={product.name} />
-          <ProductAttributes product={product} />
+          <ProductAttributes collection={collection} product={product} />
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 import { file, image } from './images'
 import { products } from './products'
-import { collections, olfactiveFamilies } from './taxonomies'
+import { olfactiveFamilies } from './taxonomies'
 import type { CollectionBanner, FeatureCard, HeroSlide, InstagramTile } from './types'
 
 // The html base hero buttons link to "#"; they point at the matching pages here
@@ -70,19 +70,16 @@ export const featureCards: FeatureCard[] = [
   },
 ]
 
-const bannerFor = (slug: string, imageKey: string): CollectionBanner => {
-  const c = collections.find((col) => col.slug === slug)!
-  return {
-    collectionSlug: slug,
-    title: c.name,
-    text: c.description,
-    image: image(imageKey, c.name),
-  }
-}
-
-export const collectionBanners: CollectionBanner[] = [
-  bannerFor('nocturne-essence', '2025/12/prf-latest-collections-banner-1-opt.jpg'),
-  bannerFor('etheria', '2025/12/prf-latest-collections-banner-2-opt.jpg'),
+/** Home collection banners: which collections, with their own wide images. Name and text come from Payload. */
+export const homeCollectionBanners: Pick<CollectionBanner, 'collectionSlug' | 'image'>[] = [
+  {
+    collectionSlug: 'nocturne-essence',
+    image: image('2025/12/prf-latest-collections-banner-1-opt.jpg', 'Nocturne Essence'),
+  },
+  {
+    collectionSlug: 'etheria',
+    image: image('2025/12/prf-latest-collections-banner-2-opt.jpg', 'Étheria'),
+  },
 ]
 
 export const instagram = {

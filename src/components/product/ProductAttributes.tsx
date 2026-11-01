@@ -1,12 +1,18 @@
 import Link from 'next/link'
 import { Fragment } from 'react'
 
-import { collections, olfactiveFamilies } from '@/data'
-import type { Product } from '@/data/types'
+import { olfactiveFamilies } from '@/data'
+import type { Collection, Product } from '@/data/types'
 
 /** Bordered attribute list: Collection, Olfactive Family, Perfume (for him / for her). */
-export function ProductAttributes({ product }: { product: Product }) {
-  const collection = collections.find((c) => c.slug === product.collection)
+export function ProductAttributes({
+  product,
+  collection,
+}: {
+  product: Product
+  /** The product's collection from Payload; the row is empty when it doesn't exist */
+  collection?: Collection
+}) {
   const rows = [
     {
       label: 'Collection',

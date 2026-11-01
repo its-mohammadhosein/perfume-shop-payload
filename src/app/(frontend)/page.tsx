@@ -11,18 +11,19 @@ import { Carousel } from '@/components/ui/Carousel'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import {
-  collectionBanners,
   featureCards,
   getProductsBySlugs,
   heroSlides,
+  homeCollectionBanners,
   homeOlfactiveFamilies,
   instagram,
   marqueeWords,
   newInSlugs,
   promoSlugs,
 } from '@/data'
-import type { Product } from '@/data/types'
+import type { CollectionBanner, Product } from '@/data/types'
 import { getJournalPosts } from '@/journal/posts'
+import { getFragranceCollections } from '@/shop/queries'
 import { pageMetadata } from '@/utilities/pageMetadata'
 
 export const metadata = pageMetadata({ path: '/' })
@@ -44,11 +45,15 @@ function ProductCarousel({ products, perView }: { products: Product[]; perView: 
   )
 }
 
-// Picks up newly published posts (also refreshed by the revalidatePost hook)
+// Picks up newly published posts (also refreshed by the revalidatePost / revalidateSite hooks)
 export const revalidate = 600
 
 export default async function HomePage() {
-  const posts = await getJournalPosts(5)
+  const [posts, collections] = await Promise.all([getJournalPosts(5), getFragranceCollections()])
+  const collectionBanners: CollectionBanner[] = homeCollectionBanners.flatMap((banner) => {
+    const c = collections.find((col) => col.slug === banner.collectionSlug)
+    return c ? [{ ...banner, title: c.name, text: c.description }] : []
+  })
 
   const promo = getProductsBySlugs(promoSlugs)
 
@@ -102,9 +107,11 @@ export default async function HomePage() {
           />
         </Section>
 
-        <Section>
-          <CollectionBanners banners={collectionBanners} />
-        </Section>
+        {collectionBanners.length > 0 && (
+          <Section>
+            <CollectionBanners banners={collectionBanners} />
+          </Section>
+        )}
 
         {posts.length > 0 && (
           <Section>

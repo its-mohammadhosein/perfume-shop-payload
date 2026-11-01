@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 import { CollectionBanners } from '@/components/sections/home/CollectionBanners'
 import { Container } from '@/components/ui/Container'
 import { PageTitle } from '@/components/ui/PageTitle'
-import { collections } from '@/data'
+import { getFragranceCollections } from '@/shop/queries'
 import { pageMetadata } from '@/utilities/pageMetadata'
 
 const description =
-  'Six collections, each with its own mood: from airy florals to deep, smoky woods. Choose a collection to explore its fragrances.'
+  'Each collection has its own mood, from airy florals to deep, smoky woods. Choose a collection to explore its fragrances.'
 
 export const metadata: Metadata = pageMetadata({
   title: 'Fragrances',
@@ -16,7 +16,9 @@ export const metadata: Metadata = pageMetadata({
 })
 
 /** Collections overview (not mirrored in the html base): every collection as a banner. */
-export default function FragrancesPage() {
+export default async function FragrancesPage() {
+  const collections = await getFragranceCollections()
+
   return (
     <>
       <PageTitle>Fragrances</PageTitle>

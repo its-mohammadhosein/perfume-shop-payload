@@ -36,8 +36,8 @@ function LinkColumn({ column, onNavigate }: { column: MegaMenuColumn; onNavigate
 }
 
 /**
- * "Fragrances" dropdown: the gender columns stacked, "All Collections", and a featured
- * collection card.
+ * "Fragrances" dropdown: all columns but the last stacked, the last column, and the featured
+ * collection card (left out when none is chosen in the Header global).
  */
 export function MegaMenu({ menu, onNavigate }: MegaMenuProps) {
   const { columns, featured } = menu
@@ -53,24 +53,28 @@ export function MegaMenu({ menu, onNavigate }: MegaMenuProps) {
       </div>
       {last && <LinkColumn column={last} onNavigate={onNavigate} />}
 
-      <Link
-        className="group/card relative flex h-[300px] items-end justify-center overflow-hidden p-[25px] text-center text-white"
-        href={featured.href}
-        onClick={onNavigate}
-      >
-        <Image
-          alt={featured.image.alt}
-          className="object-cover transition-transform duration-500 group-hover/card:scale-105"
-          fill
-          sizes="400px"
-          src={featured.image.src}
-        />
-        <span className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
-        <span className="relative">
-          <span className="mb-2 block text-[28px] leading-[1.2] font-medium">{featured.title}</span>
-          <span className="block text-sm leading-[1.5] text-white/90">{featured.text}</span>
-        </span>
-      </Link>
+      {featured && (
+        <Link
+          className="group/card relative flex h-[300px] items-end justify-center overflow-hidden p-[25px] text-center text-white"
+          href={featured.href}
+          onClick={onNavigate}
+        >
+          <Image
+            alt={featured.image.alt}
+            className="object-cover transition-transform duration-500 group-hover/card:scale-105"
+            fill
+            sizes="400px"
+            src={featured.image.src}
+          />
+          <span className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
+          <span className="relative">
+            <span className="mb-2 block text-[28px] leading-[1.2] font-medium">
+              {featured.title}
+            </span>
+            <span className="block text-sm leading-[1.5] text-white/90">{featured.text}</span>
+          </span>
+        </Link>
+      )}
     </div>
   )
 }

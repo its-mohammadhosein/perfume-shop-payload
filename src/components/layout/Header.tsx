@@ -1,4 +1,5 @@
-import { logos, mainNav, mobileNav, products } from '@/data'
+import { logos, products } from '@/data'
+import { getNavigation } from '@/shop/queries'
 
 import { HeaderSwitch } from './HeaderSwitch'
 import type { SearchItem } from './SearchForm'
@@ -11,8 +12,8 @@ const searchItems: SearchItem[] = products.map((p) => ({
   image: p.images[0]!,
 }))
 
-export function Header() {
-  return (
-    <HeaderSwitch logos={logos} mobileNav={mobileNav} nav={mainNav} searchItems={searchItems} />
-  )
+/** Menus come from the Header global (Payload admin → Globals → Header). */
+export async function Header() {
+  const { nav, mobileNav } = await getNavigation()
+  return <HeaderSwitch logos={logos} mobileNav={mobileNav} nav={nav} searchItems={searchItems} />
 }
